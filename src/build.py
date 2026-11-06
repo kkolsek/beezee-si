@@ -347,7 +347,8 @@ def main():
             write(p[key] + "index.html", sub_page(lang, key, lg["title"], lg["html"])); urls.append((p[key], "0.3"))
         thanks = '<p>%s</p><h2>%s</h2><p>%s</p>' % (esc(t["thanksText"]), esc(t["thanksHiveTitle"]), esc(t["thanksHiveText"]))
         write(p["thanks"] + "index.html", sub_page(lang, "thanks", t["thanksTitle"], thanks, noindex=True, cls="thanks"))
-        write(p["welcome"] + "index.html", sub_page(lang, "welcome", t["welcomeTitle"], "<p>%s</p>" % esc(t["welcomeText"]), noindex=True, cls="thanks"))
+        welcome = '<p>%s</p><p><a class="btn btn-honey" href="%s" download>%s</a></p>' % (esc(t["welcomeText"]), t["checklist"], esc(t["download"]))
+        write(p["welcome"] + "index.html", sub_page(lang, "welcome", t["welcomeTitle"], welcome, noindex=True, cls="thanks"))
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for lang in LANGS:
@@ -356,7 +357,7 @@ def main():
             sm.append('<url><loc>%s%s</loc><lastmod>%s</lastmod>%s</url>' % (SITE, PATHS[lang][key], TODAY, alts))
     sm.append('</urlset>')
     write("/sitemap.xml", "\n".join(sm) + "\n")
-    write("/robots.txt", "User-agent: *\nAllow: /\nDisallow: /hvala/\nDisallow: /en/thanks/\nDisallow: /hr/hvala/\nDisallow: /panj/\nDisallow: /en/hive/\nDisallow: /hr/kosnica/\nSitemap: %s/sitemap.xml\n" % SITE)
+    write("/robots.txt", "User-agent: *\nAllow: /\nDisallow: /hvala/\nDisallow: /en/thanks/\nDisallow: /hr/hvala/\nDisallow: /panj/\nDisallow: /en/hive/\nDisallow: /hr/kosnica/\nDisallow: /assets/pdf/\nSitemap: %s/sitemap.xml\n" % SITE)
     print("OK ->", DIST)
 
 if __name__ == "__main__":

@@ -6,4 +6,5 @@ Disallow: /hr/hvala/
 Disallow: /panj/
 Disallow: /en/hive/
 Disallow: /hr/kosnica/
+Disallow: /assets/pdf/
 Sitemap: https://beezee.si/sitemap.xml

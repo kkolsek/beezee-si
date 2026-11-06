@@ -62,7 +62,7 @@ T = {
         "backHome": "← Nazaj na domačo stran",
         "thanksTitle": "Hvala!", "thanksText": "Tvoje sporočilo je v panju. Odpišem v dveh delovnih dneh.",
         "thanksHiveTitle": "Še en korak.", "thanksHiveText": "Če si se prijavil/-a v panj: preveri pošto in klikni potrditveno povezavo.",
-        "welcomeTitle": "Dobrodošel/-a v panju! 🐝", "welcomeText": "Prijava je potrjena. Pisala bom samo, ko bom imela kaj sladkega: nova aplikacija, nov projekt, kontrolni seznam. Odjava je mogoča kadar koli s sporočilom na katja@beezee.si.",
+        "welcomeTitle": "Dobrodošel/-a v panju! 🐝", "download": "Prenesi kontrolni seznam (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-sl.pdf", "welcomeText": "Prijava je potrjena. Pisala bom samo, ko bom imela kaj sladkega: nova aplikacija, nov projekt, kontrolni seznam. Odjava je mogoča kadar koli s sporočilom na katja@beezee.si.",
     },
     "en": {
         "htmlLang": "en", "ogLocale": "en_GB",
@@ -112,7 +112,7 @@ T = {
         "backHome": "← Back to the home page",
         "thanksTitle": "Thank you!", "thanksText": "Your message is in the hive. I'll reply within two working days.",
         "thanksHiveTitle": "One more step.", "thanksHiveText": "If you joined the hive: check your inbox and click the confirmation link.",
-        "welcomeTitle": "Welcome to the hive! 🐝", "welcomeText": "Your subscription is confirmed. I only write when I have something sweet: a new app, a new project, the checklist. You can unsubscribe any time by writing to katja@beezee.si.",
+        "welcomeTitle": "Welcome to the hive! 🐝", "download": "Download the checklist (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-en.pdf", "welcomeText": "Your subscription is confirmed. I only write when I have something sweet: a new app, a new project, the checklist. You can unsubscribe any time by writing to katja@beezee.si.",
     },
     "hr": {
         "htmlLang": "hr", "ogLocale": "hr_HR",
@@ -162,7 +162,7 @@ T = {
         "backHome": "← Natrag na početnu",
         "thanksTitle": "Hvala!", "thanksText": "Tvoja poruka je u košnici. Odgovorim u dva radna dana.",
         "thanksHiveTitle": "Još jedan korak.", "thanksHiveText": "Ako si se prijavio/-la u košnicu: provjeri poštu i klikni poveznicu za potvrdu.",
-        "welcomeTitle": "Dobrodošao/-la u košnicu! 🐝", "welcomeText": "Prijava je potvrđena. Pišem samo kad imam nešto slatko: nova aplikacija, novi projekt, kontrolni popis. Odjava je moguća bilo kada porukom na katja@beezee.si.",
+        "welcomeTitle": "Dobrodošao/-la u košnicu! 🐝", "download": "Preuzmi kontrolni popis (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-hr.pdf", "welcomeText": "Prijava je potvrđena. Pišem samo kad imam nešto slatko: nova aplikacija, novi projekt, kontrolni popis. Odjava je moguća bilo kada porukom na katja@beezee.si.",
     },
 }
 

@@ -19,6 +19,11 @@ Stran je čist HTML/CSS z malo JavaScripta, zgrajena po vzoru lonc.app. Brez Wor
 3. `git commit` + `git push` v GitHub (`kkolsek/beezee-si`)
 4. v cPanelu → Git Version Control → beezee-si → **Update from Remote**, nato **Deploy HEAD Commit** – `.cpanel.yml` prekopira `dist/` na strežnik
 
+## Kontrolni seznam (PDF za Panj)
+- vsebina: `src/pdf/checklist_content.py` (SL/EN/HR), generator: `python3 src/pdf/make_checklist.py` → `dist/assets/pdf/beezee-kontrolni-seznam-{sl,en,hr}.pdf`
+- potrebuje `pip install reportlab fonttools brotli`; pisave vzame iz `dist/assets/fonts`
+- po potrditvi prijave `panj.php` pošlje pozdravno e-pošto s povezavo na PDF, stran »Dobrodošli v panju« ima gumb za prenos
+
 ## Git / objava
 - repozitorij: https://github.com/kkolsek/beezee-si (privatni), v cPanelu kloniran v `/home/beezeesi/repositories/beezee-si`
 - `.cpanel.yml` določa, kam se razporedi: zdaj `test.beezee.si` + doda noindex glavo
@@ -40,7 +45,6 @@ Stran je čist HTML/CSS z malo JavaScripta, zgrajena po vzoru lonc.app. Brez Wor
 ## Kar še manja (po vrsti)
 - [ ] Impresum, zasebnost, piškotki: zamenjaj `[oglate oklepaje]` s pravimi podatki (naslov, matična, davčna, datum)
 - [ ] preizkus obeh obrazcev na strežniku (pošta pride? potrditvena povezava dela?)
-- [ ] kontrolni seznam PDF za Panj (povezava v potrditvenem/pozdravnem sporočilu)
 - [ ] povezave na App Store / Google Play, ko bo Lonc objavljen (kartici zdaj vodita na lonc.app in pausie.app)
 - [ ] podstrani projektov (študije primerov) – ko bodo posnetki zaslona in številke
 - [ ] analitika: če Plausible, ni treba obvestila o piškotkih; če GA4, je treba dodati soglasje in posodobiti stran Piškotki

@@ -24,6 +24,11 @@ $PATHS = [
     'en' => ['thanks' => '/en/thanks/',  'welcome' => '/en/hive/welcome/',     'home' => '/en/#panj'],
     'hr' => ['thanks' => '/hr/hvala/',   'welcome' => '/hr/kosnica/dobrodosli/', 'home' => '/hr/#panj'],
 ];
+$WELCOME = [
+    'sl' => ['subj' => 'Dobrodošel/-a v panju 🐝 – tukaj je kontrolni seznam', 'body' => "Živjo!\n\nPrijava je potrjena, dobrodošel/-a v panju.\n\nObljubljeni kontrolni seznam pred prenovo spletne strani (PDF):\n%s\n\nPisala bom samo, ko bom imela kaj sladkega. Odjava kadar koli z odgovorom na to sporočilo.\n\nKatja\nbeezee.si", 'pdf' => '/assets/pdf/beezee-kontrolni-seznam-sl.pdf'],
+    'en' => ['subj' => 'Welcome to the hive 🐝 – here is your checklist', 'body' => "Hi!\n\nYour subscription is confirmed, welcome to the hive.\n\nThe promised website redesign checklist (PDF):\n%s\n\nI only write when I have something sweet. Unsubscribe any time by replying to this email.\n\nKatja\nbeezee.si", 'pdf' => '/assets/pdf/beezee-kontrolni-seznam-en.pdf'],
+    'hr' => ['subj' => 'Dobrodošao/-la u košnicu 🐝 – evo kontrolnog popisa', 'body' => "Bok!\n\nPrijava je potvrđena, dobrodošao/-la u košnicu.\n\nObećani kontrolni popis prije redizajna web stranice (PDF):\n%s\n\nPišem samo kad imam nešto slatko. Odjava bilo kada odgovorom na ovu poruku.\n\nKatja\nbeezee.si", 'pdf' => '/assets/pdf/beezee-kontrolni-seznam-hr.pdf'],
+];
 $MAIL = [
     'sl' => ['subj' => 'Potrdi prijavo v panj 🐝', 'body' => "Živjo!\n\nŠe en klik in si v panju. Potrdi prijavo tukaj:\n%s\n\nČe se nisi prijavil/-a, to sporočilo prezri.\n\nKatja\nbeezee.si"],
     'en' => ['subj' => 'Confirm your hive subscription 🐝', 'body' => "Hi!\n\nOne more click and you're in the hive. Confirm here:\n%s\n\nIf you didn't sign up, just ignore this email.\n\nKatja\nbeezee.si"],
@@ -82,6 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['potrdi'], $_GET['t'])) 
             fwrite($fh, strtolower($email) . ';' . $lang . ';' . date('Y-m-d H:i:s') . ';' . ($_SERVER['REMOTE_ADDR'] ?? '') . "\n");
             fclose($fh);
         }
+        sendMail($email, $WELCOME[$lang]['subj'], sprintf($WELCOME[$lang]['body'], $siteUrl . $WELCOME[$lang]['pdf']), $from, $owner);
         sendMail($owner, '[beezee.si] Nov član panja: ' . $email, "Nov potrjen član panja.\n\nE-pošta: $email\nJezik: $lang\nČas: " . date('Y-m-d H:i:s') . "\n\nSeznam: $file\n", $from);
     }
     header('Location: ' . $PATHS[$lang]['welcome'], true, 303); exit;
