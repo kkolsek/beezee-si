@@ -1,0 +1,55 @@
+# beezee.si – statična stran
+# OPOMBA: ob prenosu v public_html obdrži obstoječe preusmeritve pausie.si / getpausie.com → pausie.app in lonc.si → lonc.app (so nad tem blokom v .htaccess na strežniku).
+
+DirectoryIndex index.html index.php
+Options -Indexes
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# https + brez www
+RewriteCond %{HTTP_HOST} ^(www\.)?beezee\.si$ [NC]
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://beezee.si/$1 [R=301,L]
+
+# stare WordPress poti (blog, kategorije …) → domača stran
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule ^(wp-|blog|category|tag|author|feed|page/|\d{4}/) / [R=301,L]
+</IfModule>
+
+# config.php ni dostopen prek spleta
+<Files "config.php">
+  Require all denied
+</Files>
+<Files "config.example.php">
+  Require all denied
+</Files>
+
+# predpomnjenje statičnih datotek
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\.(woff2|webp|png|ico)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+ErrorDocument 404 /index.html

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /hvala/
+Disallow: /en/thanks/
+Disallow: /hr/hvala/
+Disallow: /panj/
+Disallow: /en/hive/
+Disallow: /hr/kosnica/
+Sitemap: https://beezee.si/sitemap.xml

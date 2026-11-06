@@ -1,0 +1,9 @@
+---
+# cPanel Git Version Control – samodejno razporejanje ob »Deploy HEAD Commit«
+# Zdaj: na test.beezee.si (z noindex). Ob objavi v živo: DEPLOYPATH zamenjaj s /home/beezeesi/public_html/
+# in odstrani vrstico z X-Robots-Tag (glej README).
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/beezeesi/test.beezee.si/
+    - /bin/cp -R dist/. $DEPLOYPATH
+    - /usr/bin/printf '\n# SAMO ZA test.beezee.si: noindex (doda .cpanel.yml)\n<IfModule mod_headers.c>\nHeader set X-Robots-Tag "noindex, nofollow"\n</IfModule>\n' >> $DEPLOYPATH.htaccess
