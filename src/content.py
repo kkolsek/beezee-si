@@ -46,7 +46,7 @@ T = {
         "hiveDoc": "Kontrolni seznam pred prenovo spletne strani", "hiveDocSub": "PDF · brezplačno ob prijavi",
         "hiveGift1": "Kontrolni seznam pred prenovo", "hiveGift2": "Obvestila o novih aplikacijah",
         "emailPh": "tvoj@naslov.si", "join": "Pridruži se panju",
-        "hiveNote": "Brez spama. Pišem samo, ko imam kaj sladkega.",
+        "hiveNote": "Brez rednih novic. Oglasim se samo, ko imam nekaj, kar ti bo koristilo.",
         "hiveThanks": "Hvala! Preveri pošto in potrdi prijavo.",
         "hiveError": "Ups, nekaj je šlo narobe. Poskusi še enkrat ali mi piši na katja@beezee.si.",
         "contactH": "Brenčimo?", "contactSub": "Povej, kaj te muči, in odpišem hitro – običajno še isti dan.",
@@ -62,7 +62,7 @@ T = {
         "backHome": "← Nazaj na domačo stran",
         "thanksTitle": "Hvala!", "thanksText": "Tvoje sporočilo je v panju. Odpišem hitro – običajno še isti dan.",
         "thanksHiveTitle": "Še en korak.", "thanksHiveText": "Če si se prijavil/-a v panj: preveri pošto in klikni potrditveno povezavo.",
-        "welcomeTitle": "Dobrodošel/-a v panju! 🐝", "download": "Prenesi kontrolni seznam (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-sl.pdf", "welcomeText": "Prijava je potrjena. Pisala bom samo, ko bom imela kaj sladkega: nova aplikacija, nov projekt, kontrolni seznam. Odjava je mogoča kadar koli s sporočilom na katja@beezee.si.",
+        "welcomeTitle": "Bzzz, potrjeno!", "welcomeSticker": "dobrodošli v panju", "download": "Prenesi kontrolni seznam (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-sl.pdf", "welcomeText": "Hvala, da si se pridružil/-a. Obljubljeni kontrolni seznam te čaka spodaj. Brez rednih novic – oglasim se samo, ko imam nekaj, kar ti bo koristilo: nova aplikacija, nov projekt, uporaben nasvet. Odjava je mogoča kadar koli s sporočilom na katja@beezee.si.",
     },
     "en": {
         "htmlLang": "en", "ogLocale": "en_GB",
@@ -96,7 +96,7 @@ T = {
         "hiveDoc": "Website redesign checklist", "hiveDocSub": "PDF · free when you join",
         "hiveGift1": "Redesign checklist", "hiveGift2": "New app announcements",
         "emailPh": "you@address.com", "join": "Join the hive",
-        "hiveNote": "No spam. I only write when I have something sweet.",
+        "hiveNote": "No regular newsletter. I only get in touch when I have something useful for you.",
         "hiveThanks": "Thanks! Check your inbox and confirm.",
         "hiveError": "Oops, something went wrong. Try again or write to katja@beezee.si.",
         "contactH": "Shall we buzz?", "contactSub": "Tell me what's bugging you and I'll get back to you quickly – usually the same day.",
@@ -112,7 +112,7 @@ T = {
         "backHome": "← Back to the home page",
         "thanksTitle": "Thank you!", "thanksText": "Your message is in the hive. I'll get back to you quickly – usually the same day.",
         "thanksHiveTitle": "One more step.", "thanksHiveText": "If you joined the hive: check your inbox and click the confirmation link.",
-        "welcomeTitle": "Welcome to the hive! 🐝", "download": "Download the checklist (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-en.pdf", "welcomeText": "Your subscription is confirmed. I only write when I have something sweet: a new app, a new project, the checklist. You can unsubscribe any time by writing to katja@beezee.si.",
+        "welcomeTitle": "Bzzz, confirmed!", "welcomeSticker": "welcome to the hive", "download": "Download the checklist (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-en.pdf", "welcomeText": "Thanks for joining. The promised checklist is waiting for you below. No regular newsletter – I only get in touch when I have something useful for you: a new app, a new project, a handy tip. You can unsubscribe any time by writing to katja@beezee.si.",
     },
     "hr": {
         "htmlLang": "hr", "ogLocale": "hr_HR",
@@ -146,7 +146,7 @@ T = {
         "hiveDoc": "Kontrolni popis prije redizajna web stranice", "hiveDocSub": "PDF · besplatno uz prijavu",
         "hiveGift1": "Kontrolni popis prije redizajna", "hiveGift2": "Obavijesti o novim aplikacijama",
         "emailPh": "tvoj@adresa.hr", "join": "Pridruži se košnici",
-        "hiveNote": "Bez spama. Pišem samo kad imam nešto slatko.",
+        "hiveNote": "Bez redovitih novosti. Javim se samo kad imam nešto što će ti koristiti.",
         "hiveThanks": "Hvala! Provjeri poštu i potvrdi prijavu.",
         "hiveError": "Ups, nešto je pošlo po zlu. Pokušaj ponovno ili mi piši na katja@beezee.si.",
         "contactH": "Zujimo?", "contactSub": "Reci što te muči i odgovorim brzo – obično isti dan.",
@@ -162,7 +162,7 @@ T = {
         "backHome": "← Natrag na početnu",
         "thanksTitle": "Hvala!", "thanksText": "Tvoja poruka je u košnici. Odgovorim brzo – obično isti dan.",
         "thanksHiveTitle": "Još jedan korak.", "thanksHiveText": "Ako si se prijavio/-la u košnicu: provjeri poštu i klikni poveznicu za potvrdu.",
-        "welcomeTitle": "Dobrodošao/-la u košnicu! 🐝", "download": "Preuzmi kontrolni popis (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-hr.pdf", "welcomeText": "Prijava je potvrđena. Pišem samo kad imam nešto slatko: nova aplikacija, novi projekt, kontrolni popis. Odjava je moguća bilo kada porukom na katja@beezee.si.",
+        "welcomeTitle": "Bzzz, potvrđeno!", "welcomeSticker": "dobrodošli u košnicu", "download": "Preuzmi kontrolni popis (PDF)", "checklist": "/assets/pdf/beezee-kontrolni-seznam-hr.pdf", "welcomeText": "Hvala što si se pridružio/-la. Obećani kontrolni popis čeka te ispod. Bez redovitih novosti – javim se samo kad imam nešto što će ti koristiti: nova aplikacija, novi projekt, koristan savjet. Odjava je moguća bilo kada porukom na katja@beezee.si.",
     },
 }
 

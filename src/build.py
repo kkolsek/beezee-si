@@ -309,18 +309,18 @@ def home_page(lang):
         filters=filters, rows=rows_html(lang, t), tabs=tabs, needs=needs, lang=lang, logoB=LOGO_B)
     return head(lang, t, t["metaTitle"], t["metaDesc"], home, alt) + body
 
-def sub_page(lang, key, title, inner, noindex=False, cls=""):
+def sub_page(lang, key, title, inner, noindex=False, cls="", hero=None):
     t = T[lang]; p = PATHS[lang]; home = p["home"]
     alt = {l: PATHS[l][key] for l in LANGS}
     body = """%(header)s
 <main class="page %(cls)s">
   <div class="wrap">
     <a class="back" href="%(home)s">%(back)s</a>
-    <h1>%(title)s</h1>
+    %(hero)s
     %(inner)s
   </div>
 </main>
-%(footer)s""" % {"header": header(lang, t, alt, home), "footer": footer(lang, t, home), "home": home, "back": esc(t["backHome"]), "title": esc(title), "inner": inner, "cls": cls}
+%(footer)s""" % {"header": header(lang, t, alt, home), "footer": footer(lang, t, home), "home": home, "back": esc(t["backHome"]), "title": esc(title), "inner": inner, "cls": cls, "hero": hero or "<h1>%s</h1>" % esc(title)}
     return head(lang, t, title + " | BEEZEE", t["metaDesc"], p[key], alt, noindex=noindex) + body
 
 def write(rel, content):
@@ -348,7 +348,10 @@ def main():
         thanks = '<p>%s</p><h2>%s</h2><p>%s</p>' % (esc(t["thanksText"]), esc(t["thanksHiveTitle"]), esc(t["thanksHiveText"]))
         write(p["thanks"] + "index.html", sub_page(lang, "thanks", t["thanksTitle"], thanks, noindex=True, cls="thanks"))
         welcome = '<p>%s</p><p><a class="btn btn-honey" href="%s" download>%s</a></p>' % (esc(t["welcomeText"]), t["checklist"], esc(t["download"]))
-        write(p["welcome"] + "index.html", sub_page(lang, "welcome", t["welcomeTitle"], welcome, noindex=True, cls="thanks"))
+        hero = ('<div class="welcome-head"><div class="comb-mini" aria-hidden="true"><span class="c1"></span><span class="c2"></span>'
+                '<span class="c3"><img src="%s" alt="" width="30" height="30"></span><span class="c4"></span><span class="c5"></span></div>'
+                '<div><span class="hand sticker-ok">%s</span><h1>%s</h1></div></div>') % (LOGO_B, esc(t["welcomeSticker"]), esc(t["welcomeTitle"]))
+        write(p["welcome"] + "index.html", sub_page(lang, "welcome", t["welcomeTitle"], welcome, noindex=True, cls="welcome", hero=hero))
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for lang in LANGS:

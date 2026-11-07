@@ -319,6 +319,22 @@ a.hex:hover{transform:rotate(-2deg) scale(1.03);color:var(--ink)}
 .page .back:hover{color:var(--amber)}
 .page.thanks h1{font-family:var(--hand);font-size:72px;color:var(--amber)}
 
+/* ---------- dobrodošli v panju ---------- */
+@keyframes bz-pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.welcome-head{display:flex;align-items:center;gap:28px;margin:0 0 28px;flex-wrap:wrap}
+.welcome-head h1{margin:0}
+.comb-mini{position:relative;width:133px;height:102px;flex:none}
+.comb-mini span{position:absolute;width:47px;height:54px;clip-path:var(--hex);display:flex;align-items:center;justify-content:center;animation:bz-pop .5s cubic-bezier(.3,1.4,.5,1) both}
+.comb-mini .c1{left:0;top:0;background:var(--amber);animation-delay:.1s}
+.comb-mini .c2{left:0;top:48px;background:var(--pale);animation-delay:.25s}
+.comb-mini .c3{left:43px;top:24px;background:var(--honey)}
+.comb-mini .c4{left:86px;top:0;background:#FFE88A;animation-delay:.4s}
+.comb-mini .c5{left:86px;top:48px;background:var(--amber);animation-delay:.55s}
+.comb-mini img{width:30px;height:30px}
+.sticker-ok{display:inline-block;font-size:26px;color:var(--grey);transform:rotate(-3deg);margin-bottom:4px}
+.page.welcome p{max-width:620px}
+.page.welcome .btn{margin-top:12px}
+
 /* ---------- odzivnost ---------- */
 @media (max-width:1320px){.doc{display:none}}
 @media (min-width:761px) and (max-width:1240px){
@@ -371,11 +387,13 @@ a.hex:hover{transform:rotate(-2deg) scale(1.03);color:var(--ink)}
   .sticker-hi{transform:rotate(-3deg);margin:0 0 12px;display:inline-block}
   .site-footer .wrap{flex-direction:column;align-items:flex-start}
   .page.thanks h1{font-size:56px}
+  .comb-mini{transform:scale(.8);transform-origin:left center}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .brand img,.bee-body,.wing{animation:none}
   .bee{display:none}
   .fill{transition:none}
+  .comb-mini span{animation:none}
   .hex{transition:none}
 }
