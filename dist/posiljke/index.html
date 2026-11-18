@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BeeZee Pošiljke za DPD – nalepke DPD neposredno iz WooCommerce | BEEZEE</title>
+<meta name="description" content="WordPress vtičnik za WooCommerce: DPD nalepke z enim klikom, Pickup točke in paketomati, sledenje, opomniki za prevzem in neprevzeti paketi. Za trgovine v Sloveniji in na Hrvaškem. 10 dni brezplačno.">
+<link rel="canonical" href="https://beezee.si/posiljke/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="BEEZEE">
+<meta property="og:locale" content="sl_SI">
+<meta property="og:title" content="BeeZee Pošiljke za DPD">
+<meta property="og:description" content="DPD nalepke neposredno iz WooCommerce naročila. Pickup, paketomati, sledenje, neprevzeti paketi. 10 dni brezplačno.">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!--BZ-BASE-CSS-->
+<link rel="stylesheet" href="/assets/css/style.css">
+<!--/BZ-BASE-CSS-->
+<style>
+/* ===== BeeZee Pošiljke – samo ta stran (predpona bp-) ===== */
+.bp-hero{padding:56px 120px 80px;position:relative;overflow:hidden}
+.bp-hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.bp-kicker{font-family:var(--hand);font-weight:700;font-size:26px;color:var(--grey);margin:0 0 8px;transform:rotate(-2deg);display:inline-block}
+.bp-hero h1{font-size:60px;letter-spacing:-.5px}
+.bp-hero h1 em{font-style:normal;white-space:nowrap;background:linear-gradient(transparent 62%,var(--honey) 62%)}
+.bp-lead{font-size:20px;line-height:1.55;color:var(--grey);margin:20px 0 30px;max-width:540px}
+.bp-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.bp-note{margin:18px 0 0;font-size:15px;color:var(--grey)}
+.bp-note b{color:var(--ink)}
+.bp-shot{position:relative}
+.bp-win{background:#fff;border:2px solid var(--ink);border-radius:14px;box-shadow:10px 10px 0 var(--ink);overflow:hidden;font-size:14px}
+.bp-win-top{display:flex;align-items:center;gap:7px;padding:11px 14px;background:var(--pale);border-bottom:2px solid var(--ink)}
+.bp-win-top i{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--ink);display:block}
+.bp-win-top span{margin-left:10px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--grey)}
+.bp-win-body{padding:18px 18px 20px}
+.bp-row{display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px dashed var(--sand)}
+.bp-row:last-child{border-bottom:0}
+.bp-row b{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+.bp-row small{display:block;color:var(--grey);font-size:12.5px}
+.bp-badge{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.bp-g{background:#DDF3D8;color:#1E5A16}.bp-y{background:#FFF1C2;color:#7A5A00}.bp-r{background:#FBDAD5;color:#8A1F12}.bp-b{background:#E3ECF9;color:#1D3F73}
+.bp-print{display:inline-flex;align-items:center;gap:6px;background:var(--honey);border:0;font-weight:700;font-size:12.5px;padding:6px 12px;border-radius:7px;color:var(--ink)}
+.bp-sticker{position:absolute;right:-14px;bottom:-22px;background:var(--honey);font-family:var(--hand);font-weight:700;font-size:24px;padding:6px 16px;transform:rotate(-4deg);box-shadow:3px 3px 0 var(--ink);border:2px solid var(--ink)}
+.bp-hexdeco{position:absolute;left:-90px;top:40px;width:300px;height:340px;background:var(--pale);clip-path:var(--hex);z-index:-1}
+
+.bp-strip{background:var(--ink);color:var(--cream);padding:22px 120px}
+.bp-strip .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-weight:700}
+.bp-strip span{display:flex;align-items:center;gap:10px}
+.bp-strip span::before{content:"";width:14px;height:16px;background:var(--honey);clip-path:var(--hex);flex:none}
+
+.bp-sec{padding:84px 120px}
+.bp-sec.alt{background:var(--pale)}
+.bp-head{max-width:720px;margin:0 0 44px}
+.bp-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.bp-head h2{font-size:46px;margin:0 0 12px}
+.bp-head p{margin:0;color:var(--grey);font-size:18px;line-height:1.55}
+
+.bp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bp-card{background:#fff;border:2px solid var(--ink);border-radius:16px;padding:26px 24px 24px;position:relative}
+.bp-card .bp-ico{width:46px;height:52px;background:var(--honey);clip-path:var(--hex);display:grid;place-items:center;margin-bottom:16px;font-size:20px}
+.bp-card h3{font-size:22px;margin:0 0 8px}
+.bp-card p{margin:0;color:var(--grey);line-height:1.55;font-size:16px}
+.bp-card.star{background:var(--ink);color:var(--cream)}
+.bp-card.star p{color:var(--muted)}
+.bp-card.star .bp-tag{position:absolute;top:-14px;right:18px;background:var(--honey);color:var(--ink);font-family:var(--hand);font-weight:700;font-size:20px;padding:2px 12px;transform:rotate(3deg);border:2px solid var(--ink)}
+
+.bp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.bp-step{padding:6px 6px 0 0}
+.bp-step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:58px;height:66px;background:var(--ink);color:var(--honey);clip-path:var(--hex);font-family:var(--head);font-size:28px;font-weight:700;margin-bottom:14px}
+.bp-step h3{font-size:24px;margin:0 0 8px}
+.bp-step p{margin:0;color:var(--grey);line-height:1.55}
+
+.bp-prices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.bp-price{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
+.bp-price.main{box-shadow:10px 10px 0 var(--honey);border-width:3px}
+.bp-price.soon{background:transparent;border-style:dashed;border-color:var(--muted)}
+.bp-price h3{font-size:26px;margin:0 0 4px}
+.bp-price .who{color:var(--grey);margin:0 0 20px;font-size:15px}
+.bp-amt{font-family:var(--head);font-weight:700;font-size:54px;line-height:1}
+.bp-amt small{font-family:var(--body);font-size:16px;font-weight:400;color:var(--grey)}
+.bp-old{text-decoration:line-through;color:var(--muted);font-size:22px;margin-left:6px;font-family:var(--head)}
+.bp-renew{margin:8px 0 22px;color:var(--grey);font-size:15px}
+.bp-price ul{list-style:none;padding:0;margin:0 0 26px;flex:1}
+.bp-price li{padding:7px 0 7px 26px;position:relative;line-height:1.45;font-size:15.5px}
+.bp-price li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:14px;background:var(--honey);clip-path:var(--hex)}
+.bp-price .btn{width:100%}
+.bp-launch{position:absolute;top:-16px;left:22px;background:var(--honey);border:2px solid var(--ink);font-weight:700;font-size:13px;padding:5px 12px;border-radius:99px}
+.bp-vat{text-align:center;color:var(--grey);font-size:15px;margin:28px auto 0;max-width:760px;line-height:1.55}
+
+.bp-fair{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.bp-box{border-radius:16px;padding:28px 26px;border:2px solid var(--ink);background:#fff}
+.bp-box h3{font-size:22px;margin:0 0 14px}
+.bp-box ul{margin:0;padding-left:20px;line-height:1.7;color:var(--ink)}
+.bp-box.ok{background:#F1FAEE}
+.bp-box.stop{background:#FFF6F3}
+
+.bp-faq{max-width:860px;margin:0 auto}
+.bp-faq details{border-bottom:2px solid var(--ink);padding:20px 0}
+.bp-faq summary{cursor:pointer;font-family:var(--head);font-weight:700;font-size:22px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.bp-faq summary::-webkit-details-marker{display:none}
+.bp-faq summary::after{content:"+";font-size:28px;line-height:1}
+.bp-faq details[open] summary::after{content:"–"}
+.bp-faq details p{margin:12px 0 0;color:var(--grey);line-height:1.6;font-size:17px}
+
+.bp-gls{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;background:var(--ink);color:var(--cream);border-radius:22px;padding:40px 44px}
+.bp-gls h2{font-size:38px;margin:0 0 8px}
+.bp-gls p{margin:0;color:var(--muted);line-height:1.55}
+.bp-gls form{display:flex;gap:10px;flex-wrap:wrap}
+.bp-gls input{height:52px;border:2px solid var(--cream);background:transparent;color:var(--cream);padding:0 16px;border-radius:10px;font:inherit;min-width:260px}
+.bp-gls input::placeholder{color:var(--muted)}
+.bp-gls .msg{margin-top:10px;font-size:15px;color:var(--honey);min-height:20px}
+
+.bp-final{text-align:center;padding:90px 120px 110px}
+.bp-final h2{font-size:52px;margin:0 0 14px}
+.bp-final p{color:var(--grey);font-size:19px;margin:0 0 30px}
+.bp-legal{max-width:900px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:13px;line-height:1.55;text-align:center}
+
+@media (max-width:1100px){
+ .bp-hero,.bp-sec,.bp-final,.bp-strip{padding-left:40px;padding-right:40px}
+ .bp-hero .wrap{grid-template-columns:1fr}
+ .bp-grid,.bp-prices{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+ .bp-hero,.bp-sec,.bp-final,.bp-strip{padding-left:20px;padding-right:20px}
+ .bp-hero{padding-top:28px}
+ .bp-hero h1{font-size:40px}
+ .bp-head h2,.bp-final h2{font-size:34px}
+ .bp-grid,.bp-prices,.bp-steps,.bp-fair{grid-template-columns:1fr}
+ .bp-gls{grid-template-columns:1fr;padding:30px 24px}
+ .bp-gls input{min-width:0;width:100%}
+ .bp-sticker{right:6px}
+ .bp-row{grid-template-columns:58px 1fr}
+ .bp-row .bp-badge,.bp-row .bp-print{grid-column:2;justify-self:start}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/logo-yellow.png" alt="" width="40" height="40"><span>BEEZEE</span></a>
+    <nav class="main-nav" aria-label="Glavni meni"><a href="/#delo">Delo</a><a href="/#storitve">Storitve</a><a href="/#o-meni">O meni</a><a href="/#panj">Panj</a><a href="/#kontakt">Kontakt</a></nav>
+    <div class="head-right">
+      <nav class="lang" aria-label="Jezik"><a href="/posiljke/" lang="sl" hreflang="sl" aria-current="page">SL</a><a href="/en/" lang="en" hreflang="en">EN</a><a href="/hr/" lang="hr" hreflang="hr">HR</a></nav>
+      <a class="btn btn-ink btn-sm head-cta" href="#cene">Cene</a>
+      <button class="burger" id="burger" type="button" aria-label="Meni" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <div class="top"><span>BEEZEE</span><button type="button" class="close">Zapri</button></div>
+  <nav aria-label="Meni"><a href="#funkcije">Funkcije</a><a href="#cene">Cene</a><a href="#vprasanja">Vprašanja</a><a href="/#delo">Vse delo</a><a href="/#kontakt">Kontakt</a></nav>
+  <a class="btn btn-ink" href="#cene">Začni brezplačno</a>
+</div>
+
+<main>
+
+<!-- 1. HERO -->
+<section class="bp-hero">
+  <div class="bp-hexdeco" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="bp-kicker">WordPress vtičnik za WooCommerce</p>
+      <h1>BeeZee Pošiljke<br><em>za DPD</em></h1>
+      <p class="bp-lead">DPD nalepka neposredno iz naročila – brez prepisovanja naslovov v EasyShip. Pickup točke in paketomati na blagajni, sledenje paketov in opomnik, ko paket po povzetju čaka na prevzem.</p>
+      <div class="bp-ctas">
+        <!-- TODO: povezava na prenos vtičnika (preizkus) -->
+        <a class="btn btn-honey" href="#cene">Preizkusi 10 dni brezplačno</a>
+        <a class="btn btn-outline" href="#funkcije"><span>Kaj zna</span></a>
+      </div>
+      <p class="bp-note"><b>Za trgovine v Sloveniji in na Hrvaškem.</b> Preizkušeno vsak dan v pravih spletnih trgovinah.</p>
+    </div>
+    <div class="bp-shot" aria-hidden="true">
+      <div class="bp-win">
+        <div class="bp-win-top"><i></i><i></i><i></i><span>WooCommerce › Naročila</span></div>
+        <div class="bp-win-body">
+          <div class="bp-row"><b>#4821</b><div>Maja K., Ljubljana<small>DPD paketomat · povzetje 34,90 €</small></div><span class="bp-print">🖨 Natisni nalepko</span></div>
+          <div class="bp-row"><b>#4820</b><div>Ivan P., Zagreb<small>Dostava na naslov</small></div><span class="bp-badge bp-b">Na poti</span></div>
+          <div class="bp-row"><b>#4818</b><div>Tina R., Celje<small>Pickup točka · čaka do petka</small></div><span class="bp-badge bp-y">Čaka na prevzem</span></div>
+          <div class="bp-row"><b>#4815</b><div>Ana Š., Maribor<small>Dostava na naslov</small></div><span class="bp-badge bp-g">Dostavljeno</span></div>
+          <div class="bp-row"><b>#4809</b><div>Luka M., Split<small>Povzetje · ni prevzeto</small></div><span class="bp-badge bp-r">Vrača se</span></div>
+        </div>
+      </div>
+      <div class="bp-sticker">en klik, ena nalepka</div>
+    </div>
+  </div>
+</section>
+
+<div class="bp-strip"><div class="wrap">
+  <span>DPD EasyShip SI in HR</span><span>Pickup in paketomati</span><span>Navodila v vtičniku</span><span>Osebna podpora v slovenščini in hrvaščini</span>
+</div></div>
+
+<!-- 2. FUNKCIJE -->
+<section class="bp-sec" id="funkcije">
+  <div class="wrap">
+    <div class="bp-head">
+      <h2>Vse, kar rabiš za DPD, na enem mestu</h2>
+      <p>Napisala sem ga za svoje trgovine, ker sem imela dovolj prepisovanja. Zdaj vsak dan pošlje vse naše pakete.</p>
+    </div>
+    <div class="bp-grid">
+      <div class="bp-card"><div class="bp-ico">🏷</div><h3>Nalepke z enim klikom</h3><p>Nalepka DPD iz naročila – posamično ali za več naročil hkrati. Ponovni tisk, storno in odpoklic kadarkoli.</p></div>
+      <div class="bp-card"><div class="bp-ico">📍</div><h3>Pickup in paketomati</h3><p>Kupec na blagajni na zemljevidu izbere DPD Pickup točko ali paketomat. Deluje s klasično in z novo (blokovno) blagajno.</p></div>
+      <div class="bp-card"><div class="bp-ico">🚦</div><h3>Sledenje s semaforjem</h3><p>Stanje vsakega paketa v seznamu naročil, v barvah. Filter: na poti, v dostavi danes, zamuda, vrača se, dostavljeno.</p></div>
+      <div class="bp-card"><div class="bp-ico">✉️</div><h3>»Paket je na poti«</h3><p>Kupec dobi e-pošto s številko paketa in povezavo za sledenje – v slovenščini ali hrvaščini.</p></div>
+      <div class="bp-card star"><span class="bp-tag">samo pri nas</span><div class="bp-ico">⏳</div><h3>Neprevzeti paketi</h3><p>Kupec, ki plača po povzetju, dobi opomnik, ko ga paket čaka v paketomatu ali na Pickup točki. Če paketa ne prevzame, naročilo dobi status Neprevzeto in izdelki se vrnejo na zalogo. Kdor dvakrat ne prevzame paketa, povzetja ne more več izbrati.</p></div>
+      <div class="bp-card"><div class="bp-ico">📦</div><h3>Dve naročili, en paket</h3><p>Kupec naroči še enkrat, preden odpošlješ? Poveži naročili z isto pošiljko – ena nalepka, ena e-pošta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. KAKO -->
+<section class="bp-sec alt" id="kako">
+  <div class="wrap">
+    <div class="bp-head center"><h2>Pripravljen v desetih minutah</h2><p>Potrebuješ WooCommerce in dostop do DPD EasyShip (prijava v EasyShip, ki jo že uporabljaš).</p></div>
+    <div class="bp-steps">
+      <div class="bp-step"><h3>Namesti</h3><p>Naloži vtičnik v WordPress in klikni »Začni preizkus«. Ključ za preizkus dobiš po e-pošti.</p></div>
+      <div class="bp-step"><h3>Poveži EasyShip</h3><p>Vpiši podatke za EasyShip in preizkusi povezavo. Izberi, katere načine dostave pokriva DPD.</p></div>
+      <div class="bp-step"><h3>Natisni</h3><p>Odpri naročilo, klikni »Natisni nalepko«. Vse ostalo – številka paketa, e-pošta kupcu, sledenje – gre samo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CENE -->
+<section class="bp-sec" id="cene">
+  <div class="wrap">
+    <div class="bp-head center"><h2>Enostavne cene, brez presenečenj</h2><p>Letna licenca, brez stroška namestitve. Prvih 10 trgovin dobi prvo leto 30 % ceneje.</p></div>
+    <div class="bp-prices">
+      <div class="bp-price main">
+        <span class="bp-launch">−30 % za prvih 10</span>
+        <h3>DPD</h3><p class="who">1 trgovina</p>
+        <div class="bp-amt">69 €<span class="bp-old">99 €</span> <small>prvo leto</small></div>
+        <p class="bp-renew">Nato 99 € na leto. Cene so končne.</p>
+        <ul>
+          <li>Vse funkcije, brez omejitev nalepk</li>
+          <li>Posodobitve neposredno v WordPressu</li>
+          <li>Podpora po e-pošti v SL in HR</li>
+          <li>Testna kopija trgovine se ne šteje</li>
+        </ul>
+        <!-- TODO: povezava na izdelek v trgovini licence.beezee.si -->
+        <a class="btn btn-honey" href="https://licence.beezee.si/" data-todo="izdelek-dpd">Kupi licenco</a>
+      </div>
+      <div class="bp-price">
+        <h3>DPD za agencije</h3><p class="who">do 5 trgovin</p>
+        <div class="bp-amt">299 € <small>na leto</small></div>
+        <p class="bp-renew">Za do 5 trgovin. Cene so končne.</p>
+        <ul>
+          <li>En ključ za do 5 trgovin strank</li>
+          <li>Mesto sprostiš z deaktivacijo</li>
+          <li>Vse funkcije in posodobitve</li>
+          <li>Podpora po e-pošti v SL in HR</li>
+        </ul>
+        <!-- TODO: povezava na izdelek v trgovini licence.beezee.si -->
+        <a class="btn btn-ink" href="https://licence.beezee.si/" data-todo="izdelek-agencija-dpd">Kupi licenco</a>
+      </div>
+      <div class="bp-price soon">
+        <h3>DPD + GLS</h3><p class="who">1 trgovina · kmalu</p>
+        <div class="bp-amt" style="font-size:40px">kmalu</div>
+        <p class="bp-renew">Cena ob izidu GLS vtičnika.</p>
+        <ul>
+          <li>Oba vtičnika z enim ključem</li>
+          <li>GLS ParcelShopi in paketomati</li>
+          <li>Isti vmesnik za obe dostavni službi</li>
+        </ul>
+        <a class="btn btn-outline" href="#gls"><span>Obvesti me</span></a>
+      </div>
+    </div>
+    <p class="bp-vat"><b>Preizkus:</b> 10 dni ali 30 nalepk, brezplačno in brez obveznosti – dnevi začnejo teči šele ob prvi nalepki. <b>Plačilo:</b> s kartico ali po predračunu (nakazilo).</p>
+  </div>
+</section>
+
+<!-- 5. POŠTENA LICENCA -->
+<section class="bp-sec alt" id="licenca">
+  <div class="wrap">
+    <div class="bp-head center"><h2>Kaj se zgodi, ko licenca poteče?</h2><p>Nič dramatičnega. Pred iztekom dobiš tri opomnike in predračun, po izteku pa še 3 dni vse deluje.</p></div>
+    <div class="bp-fair">
+      <div class="bp-box ok"><h3>Vedno deluje</h3><ul>
+        <li>ponovni tisk, sledenje, storno in odpoklic obstoječih paketov</li>
+        <li>izbira Pickup točke in paketomata na blagajni – tvoji kupci ne opazijo ničesar</li>
+        <li>paket, ki si ga že začela pripravljati</li>
+        <li>vse, tudi če licenčni strežnik kdaj ne odgovori</li>
+      </ul></div>
+      <div class="bp-box stop"><h3>Ustavi se samo</h3><ul>
+        <li>ustvarjanje <b>novih</b> nalepk v vtičniku – 3 dni po izteku (do podaljšanja jih, tudi za Pickup in paketomate, ustvariš sam v EasyShipu)</li>
+        <li>samodejne posodobitve vtičnika</li>
+      </ul><p style="margin:16px 0 0;color:var(--grey);line-height:1.55">Ko plačaš predračun, se licenca podaljša za eno leto od starega datuma izteka.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. VPRAŠANJA -->
+<section class="bp-sec" id="vprasanja">
+  <div class="wrap">
+    <div class="bp-head center"><h2>Vprašanja</h2></div>
+    <div class="bp-faq">
+      <details><summary>Ali rabim pogodbo z DPD?</summary><p>Da. Vtičnik uporablja tvoj obstoječi dostop do DPD EasyShip (Slovenija ali Hrvaška). Pogodbo, cene pošiljanja in prevzeme urejaš z DPD kot do zdaj.</p></details>
+      <details><summary>Ali je to uradni vtičnik DPD?</summary><p>Ne. BeeZee Pošiljke je neodvisen vtičnik, ki se poveže z DPD EasyShip. Napisan je za trgovine v Sloveniji in na Hrvaškem.</p></details>
+      <details><summary>Deluje tudi za hrvaške trgovine?</summary><p>Da. E-pošta kupcem je v slovenščini in hrvaščini, roki prevzema pa upoštevajo pravila DPD Hrvaška.</p></details>
+      <details><summary>Kaj pa veliki in težki paketi?</summary><p>DPD ima za Pickup točke in paketomate omejitve velikosti in teže. Za izdelke z velikimi ali težkimi paketi Pickup na blagajni raje ne ponudi.</p></details>
+      <details><summary>Selim trgovino na novo domeno.</summary><p>V nastavitvah klikni »Deaktiviraj«, na novi domeni pa »Aktiviraj«. Testne kopije (staging, localhost) se ne štejejo kot trgovina.</p></details>
+      <details><summary>Lahko najprej preizkusim?</summary><p>Seveda. 10 dni ali 30 nalepk, brezplačno in brez obveznosti. Dnevi začnejo teči šele ob prvi nalepki, zato ti čakanje na dostop do EasyShip ne poje preizkusa. Če ti ni všeč, preprosto ne kupiš – obstoječi paketi še naprej delujejo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GLS -->
+<section class="bp-sec" id="gls" style="padding-top:0">
+  <div class="wrap">
+    <div class="bp-gls">
+      <div><h2>GLS prihaja.</h2><p>Enak vtičnik za GLS je v izdelavi. Pusti e-naslov in javim se, ko bo pripravljen – samo enkrat, brez novic.</p></div>
+      <div>
+        <!-- TODO: povezati s prijavo v Panj (MailerLite) -->
+        <form id="bp-gls-form"><input type="email" required placeholder="tvoj@email.si" aria-label="E-pošta"><button class="btn btn-honey" type="submit">Obvesti me</button></form>
+        <div class="msg" id="bp-gls-msg" role="status"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bp-final">
+  <h2>Manj prepisovanja, več prodaje.</h2>
+  <p>Namesti, poveži EasyShip in natisni prvo nalepko še danes.</p>
+  <div class="bp-ctas" style="justify-content:center">
+    <a class="btn btn-honey" href="#cene">Preizkusi brezplačno</a>
+    <a class="btn btn-outline" href="/#kontakt"><span>Imam vprašanje</span></a>
+  </div>
+</section>
+
+<p class="bp-legal">DPD je registrirana znamka svojega lastnika. BeeZee Pošiljke ni izdelek DPD in ni povezan z DPD; ime DPD je uporabljeno le za opis združljivosti. WooCommerce in WordPress sta znamki svojih lastnikov.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand"><img src="/assets/img/logo-black.png" alt="" width="30" height="30"><div><strong>BEEZEE</strong><br><span>BEEZEE.SI Katja Kolšek s.p.</span></div></div>
+    <nav class="foot-nav" aria-label="Noga"><a href="/#delo">Delo</a><a href="/#storitve">Storitve</a><a href="/#o-meni">O meni</a><a href="/#panj">Panj</a><a href="/#kontakt">Kontakt</a></nav>
+    <div class="foot-legal"><span>SL · EN · HR</span><a href="/zasebnost/">Zasebnost</a><a href="/piskotki/">Piškotki</a><a href="/impresum/">Impresum</a></div>
+  </div>
+</footer>
+
+<!--BZ-BASE-JS-->
+<script src="/assets/js/main.js"></script>
+<!--/BZ-BASE-JS-->
+<script>
+(function(){
+  var f=document.getElementById('bp-gls-form');
+  if(f){f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('bp-gls-msg').textContent='Hvala! Javim se, ko bo GLS pripravljen.';f.reset();});}
+})();
+</script>
+</body>
+</html>
