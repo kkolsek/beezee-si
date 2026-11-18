@@ -124,7 +124,7 @@ def comb(with_labels=True):
 def card(p, lang, t):
     name = L(p["name"], lang); url = L(p["url"], lang); desc = p["d"][lang]; cat = t[p["catKey"]]
     tag = "a" if p["href"] else "div"
-    href = ' href="%s" target="_blank" rel="noopener"' % p["href"] if p["href"] else ""
+    href = (' href="%s" target="_blank" rel="noopener"' % p["href"] if p["href"].startswith("http") else ' href="%s"' % p["href"]) if p["href"] else ""
     if p["type"] == "web":
         visual = """<div class="browser"><div class="bar"><i></i><i></i><i></i><b>%s</b></div><img src="/assets/img/%s-s.webp" alt="" width="440" height="197" loading="lazy"></div>""" % (esc(url), p["img"])
     elif p["type"] == "app":
@@ -337,6 +337,12 @@ def main():
     for php in ("kontakt.php", "panj.php", "config.example.php", ".htaccess"):
         src = os.path.join(HERE, php)
         if os.path.exists(src): shutil.copy(src, os.path.join(DIST, php))
+    # Prodajna stran vtičnika (samostojen HTML, uporablja /assets/css/style.css)
+    for sub in ("posiljke",):
+        src = os.path.join(HERE, sub, "index.html")
+        if os.path.exists(src):
+            os.makedirs(os.path.join(DIST, sub), exist_ok=True)
+            shutil.copy(src, os.path.join(DIST, sub, "index.html"))
 
     urls = []
     for lang in LANGS:
@@ -354,6 +360,7 @@ def main():
         write(p["welcome"] + "index.html", sub_page(lang, "welcome", t["welcomeTitle"], welcome, noindex=True, cls="welcome", hero=hero))
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    sm.append('<url><loc>%s/posiljke/</loc><lastmod>%s</lastmod></url>' % (SITE, TODAY))
     for lang in LANGS:
         for key in ("home", "privacy", "cookies", "imprint"):
             alts = "".join('<xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>' % (l, SITE, PATHS[l][key]) for l in LANGS)

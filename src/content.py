@@ -196,11 +196,11 @@ PROJECTS = [
      "d": {"sl": "Predstavitvena stran aplikacije Pausie: hitra, lahka, brez WordPressa.",
            "en": "Landing site for the Pausie app: fast, light, no WordPress.",
            "hr": "Predstavitvena stranica aplikacije Pausie: brza, lagana, bez WordPressa."}},
-    {"id": "shipping", "name": {"sl": "Woo pošiljanje", "en": "Woo shipping", "hr": "Woo dostava"}, "url": {"sl": "WooCommerce › Naročilo #4821", "en": "WooCommerce › Order #4821", "hr": "WooCommerce › Narudžba #4821"},
-     "href": None, "img": None, "cat": "plugin", "catKey": "catPlugin", "type": "plugin", "ph": "DPD · GLS",
-     "d": {"sl": "Vtičnika za DPD in GLS: paketi in nalepke neposredno iz naročila.",
-           "en": "DPD and GLS plugins: parcels and labels straight from the order.",
-           "hr": "Dodaci za DPD i GLS: paketi i naljepnice izravno iz narudžbe."}},
+    {"id": "shipping", "name": "BeeZee Pošiljke za DPD", "url": {"sl": "WooCommerce › Naročilo #4821", "en": "WooCommerce › Order #4821", "hr": "WooCommerce › Narudžba #4821"},
+     "href": "/posiljke/", "img": None, "cat": "plugin", "catKey": "catPlugin", "type": "plugin", "ph": "DPD · GLS",
+     "d": {"sl": "DPD nalepke z enim klikom iz WooCommerce naročila, Pickup točke in paketomati, sledenje in neprevzeti paketi. 10 dni brezplačno. Kmalu tudi za GLS.",
+           "en": "One-click DPD labels from the WooCommerce order, Pickup points and lockers, tracking and unclaimed parcels. 10 days free. GLS coming soon.",
+           "hr": "DPD naljepnice jednim klikom iz WooCommerce narudžbe, Pickup mjesta i paketomati, praćenje i nepreuzeti paketi. 10 dana besplatno. Uskoro i za GLS."}},
 ]
 
 FILTERS = [("all", "fAll"), ("site", "fSites"), ("shop", "fShops"), ("plugin", "fPlugins"), ("app", "fApps")]
