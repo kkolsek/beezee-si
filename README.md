@@ -26,8 +26,10 @@ Stran je čist HTML/CSS z malo JavaScripta, zgrajena po vzoru lonc.app. Brez Wor
 
 ## Git / objava
 - repozitorij: https://github.com/kkolsek/beezee-si (privatni), v cPanelu kloniran v `/home/beezeesi/repositories/beezee-si`
-- `.cpanel.yml` določa, kam se razporedi: zdaj `test.beezee.si` + doda noindex glavo
-- **ob objavi v živo:** v `.cpanel.yml` nastavi `DEPLOYPATH=/home/beezeesi/public_html/`, zbriši vrstico s `printf` (noindex), v `src/.htaccess` dodaj preusmeritve pausie.si/getpausie.com → pausie.app in lonc.si → lonc.app, zgradi, push, deploy
+- **od 20. 11. 2026** `.cpanel.yml` razporeja neposredno na **beezee.si** (`public_html`): prekopira `dist/`, nato na strežniku zažene `python3 src/build.py` z `BEEZEE_DIST=public_html`. Strani se torej zgradijo iz `src/` ob vsakem deployu, tudi če `dist/` v repozitoriju ni svež.
+- preusmeritve pausie.si/getpausie.com → pausie.app in lonc.si → lonc.app so na vrhu `src/.htaccess` (in `dist/.htaccess`) – ne briši jih
+- test.beezee.si je izbrisan (20. 11. 2026)
+- prodajni in licenčni pogoji (BeeZee Pošiljke): besedila v `src/terms.py`, strani `/pogoji/`, `/en/terms/`, `/hr/uvjeti/`
 
 ## URL-ji
 - `/` slovensko, `/en/` angleško, `/hr/` hrvaško (hreflang je nastavljen)
