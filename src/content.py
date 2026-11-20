@@ -8,9 +8,9 @@ LANGS = ["sl", "en", "hr"]
 
 # Pot do domače strani in pravnih strani po jezikih (relativno na koren)
 PATHS = {
-    "sl": {"home": "/",    "privacy": "/zasebnost/",   "cookies": "/piskotki/",   "imprint": "/impresum/", "thanks": "/hvala/", "welcome": "/panj/dobrodosli/"},
-    "en": {"home": "/en/", "privacy": "/en/privacy/",  "cookies": "/en/cookies/", "imprint": "/en/imprint/", "thanks": "/en/thanks/", "welcome": "/en/hive/welcome/"},
-    "hr": {"home": "/hr/", "privacy": "/hr/privatnost/", "cookies": "/hr/kolacici/", "imprint": "/hr/impresum/", "thanks": "/hr/hvala/", "welcome": "/hr/kosnica/dobrodosli/"},
+    "sl": {"home": "/",    "privacy": "/zasebnost/",   "cookies": "/piskotki/",   "imprint": "/impresum/", "terms": "/pogoji/", "thanks": "/hvala/", "welcome": "/panj/dobrodosli/"},
+    "en": {"home": "/en/", "privacy": "/en/privacy/",  "cookies": "/en/cookies/", "imprint": "/en/imprint/", "terms": "/en/terms/", "thanks": "/en/thanks/", "welcome": "/en/hive/welcome/"},
+    "hr": {"home": "/hr/", "privacy": "/hr/privatnost/", "cookies": "/hr/kolacici/", "imprint": "/hr/impresum/", "terms": "/hr/uvjeti/", "thanks": "/hr/hvala/", "welcome": "/hr/kosnica/dobrodosli/"},
 }
 
 T = {
@@ -56,7 +56,7 @@ T = {
         "sentError": "Sporočila ni bilo mogoče poslati. Piši mi na katja@beezee.si.",
         "consent": "Strinjam se z obdelavo podatkov za namen odgovora.",
         "orWrite": "Ali piši na", "phoneLabel": "Telefon", "phone": "041 449 054", "linkedin": "LinkedIn", "printLabel": "Natisni nalepko",
-        "footLegal": "BEEZEE.SI Katja Kolšek s.p.", "privacy": "Zasebnost", "cookies": "Piškotki", "imprint": "Impresum",
+        "footLegal": "BEEZEE.SI Katja Kolšek s.p.", "privacy": "Zasebnost", "cookies": "Piškotki", "imprint": "Impresum", "terms": "Pogoji",
         "langLabel": "Jezik", "menu": "Meni", "close": "Zapri", "mainNav": "Glavni meni", "footNav": "Noga", "filterLabel": "Filter",
         "sticker1": "ta je moja", "sticker2": "sladko delo", "sticker3": "tukaj začneva",
         "backHome": "← Nazaj na domačo stran",
@@ -106,7 +106,7 @@ T = {
         "sentError": "The message could not be sent. Please write to katja@beezee.si.",
         "consent": "I agree to my data being processed to answer this request.",
         "orWrite": "Or write to", "phoneLabel": "Phone", "phone": "+386 41 449 054", "linkedin": "LinkedIn", "printLabel": "Print label",
-        "footLegal": "BEEZEE.SI Katja Kolšek s.p.", "privacy": "Privacy", "cookies": "Cookies", "imprint": "Imprint",
+        "footLegal": "BEEZEE.SI Katja Kolšek s.p.", "privacy": "Privacy", "cookies": "Cookies", "imprint": "Imprint", "terms": "Terms",
         "langLabel": "Language", "menu": "Menu", "close": "Close", "mainNav": "Main menu", "footNav": "Footer", "filterLabel": "Filter",
         "sticker1": "this one is mine", "sticker2": "sweet work", "sticker3": "we start here",
         "backHome": "← Back to the home page",
@@ -156,7 +156,7 @@ T = {
         "sentError": "Poruku nije bilo moguće poslati. Piši mi na katja@beezee.si.",
         "consent": "Slažem se s obradom podataka u svrhu odgovora.",
         "orWrite": "Ili piši na", "phoneLabel": "Telefon", "phone": "+386 41 449 054", "linkedin": "LinkedIn", "printLabel": "Ispiši naljepnicu",
-        "footLegal": "BEEZEE.SI Katja Kolšek s.p.", "privacy": "Privatnost", "cookies": "Kolačići", "imprint": "Impresum",
+        "footLegal": "BEEZEE.SI Katja Kolšek s.p.", "privacy": "Privatnost", "cookies": "Kolačići", "imprint": "Impresum", "terms": "Uvjeti",
         "langLabel": "Jezik", "menu": "Izbornik", "close": "Zatvori", "mainNav": "Glavni izbornik", "footNav": "Podnožje", "filterLabel": "Filter",
         "sticker1": "ova je moja", "sticker2": "slatki posao", "sticker3": "ovdje počinjemo",
         "backHome": "← Natrag na početnu",
@@ -209,74 +209,82 @@ FILTERS = [("all", "fAll"), ("site", "fSites"), ("shop", "fShops"), ("plugin", "
 LEGAL = {
     "sl": {
         "imprint": {"title": "Impresum", "html": """
-<p><strong>BEEZEE.SI Katja Kolšek s.p.</strong><br>[Naslov], [Pošta]<br>Slovenija</p>
-<p>Matična številka: [matična št.]<br>Davčna številka: [davčna št.]<br>Identifikacijska številka za DDV: [SI-ID za DDV, če je]</p>
+<p><strong>BEEZEE.SI, digitalni marketing in poslovno svetovanje, Katja Kolšek s.p.</strong><br>Ob Savinji 167, 3313 Polzela<br>Slovenija</p>
+<p>Matična številka: 8129495000<br>Identifikacijska številka za DDV: SI14765977<br>Nisem zavezanka za DDV (identificirana za namene DDV po 76. a členu ZDDV-1).</p>
 <p>E-pošta: <a href="mailto:katja@beezee.si">katja@beezee.si</a><br>Telefon: <a href="tel:+38641449054">041 449 054</a></p>
 <p>Odgovorna oseba za vsebino: Katja Kolšek.</p>
 <p>Logotip in besedila na tej strani so last BEEZEE.SI Katja Kolšek s.p. Posnetki zaslona projektov so last njihovih lastnikov in so prikazani kot referenca.</p>"""},
         "privacy": {"title": "Politika zasebnosti", "html": """
-<p>Upravljavec osebnih podatkov je BEEZEE.SI Katja Kolšek s.p., [Naslov], [Pošta], <a href="mailto:katja@beezee.si">katja@beezee.si</a> (v nadaljevanju »jaz«).</p>
+<p>Upravljavec osebnih podatkov je BEEZEE.SI Katja Kolšek s.p., Ob Savinji 167, 3313 Polzela, <a href="mailto:katja@beezee.si">katja@beezee.si</a> (v nadaljevanju »jaz«).</p>
 <h2>Katere podatke obdelujem in zakaj</h2>
 <p><strong>Kontaktni obrazec.</strong> Ko mi pišeš prek obrazca, obdelujem tvoje ime, e-poštni naslov in vsebino sporočila, da ti lahko odgovorim. Pravna podlaga je tvoja privolitev (člen 6(1)(a) GDPR) in izvajanje predpogodbenih ukrepov (člen 6(1)(b) GDPR). Sporočila hranim največ 2 leti po zadnjem stiku, razen če iz njih nastane sodelovanje.</p>
 <p><strong>Panj (e-novice).</strong> Ob prijavi obdelujem tvoj e-poštni naslov, da ti pošljem kontrolni seznam in občasna obvestila o novih aplikacijah in projektih. Pravna podlaga je privolitev, ki jo potrdiš s klikom v potrditvenem e-sporočilu (dvojna potrditev). Odjaviš se lahko kadar koli s povezavo na dnu vsakega sporočila ali s sporočilom na katja@beezee.si. Seznam članov hranim na svojem strežniku (Neoserv, Slovenija); ne uporabljam zunanjih orodij za e-novice.</p>
+<p><strong>Nakup licence za BeeZee Pošiljke.</strong> Ob nakupu obdelujem tvoje ime, ime podjetja, naslov, davčno številko oziroma ID za DDV, e-poštni naslov in domeno trgovine, da izvedem pogodbo, ti pošljem licenčni ključ, račun in opomnike pred iztekom ter ti nudim podporo. Pravna podlaga je izvajanje pogodbe (člen 6(1)(b) GDPR) in zakonska obveznost hrambe računov (člen 6(1)(c) GDPR); račune hranim 10 let. Pri plačilu s kartico podatke kartice obdela plačilni posrednik (Stripe); jaz jih ne vidim in ne hranim. Vtičnik ob aktivaciji in preverjanju licence pošlje na moj licenčni strežnik licenčni ključ in domeno trgovine; podatkov tvojih kupcev ne pošilja.</p>
 <p><strong>Strežniški dnevniki.</strong> Gostovanje strani zagotavlja Neoserv (Slovenija). Strežnik iz tehničnih in varnostnih razlogov kratek čas beleži IP naslov, čas dostopa in zahtevano stran. Pravna podlaga je moj zakoniti interes (člen 6(1)(f) GDPR).</p>
 <h2>Komu posredujem podatke</h2>
-<p>Podatkov ne prodajam in jih ne posredujem tretjim osebam, razen ponudniku gostovanja, ki delujejo po mojih navodilih in v skladu z GDPR.</p>
+<p>Podatkov ne prodajam in jih ne posredujem tretjim osebam, razen ponudniku gostovanja, plačilnemu posredniku (Stripe) in računovodskemu servisu, ki delujejo po mojih navodilih in v skladu z GDPR.</p>
 <h2>Tvoje pravice</h2>
 <p>Kadar koli lahko zahtevaš dostop do svojih podatkov, popravek, izbris, omejitev obdelave ali prenos podatkov ter prekličeš privolitev. Piši na <a href="mailto:katja@beezee.si">katja@beezee.si</a>. Pritožbo lahko vložiš pri Informacijskem pooblaščencu Republike Slovenije (www.ip-rs.si).</p>
-<p>Zadnja posodobitev: [datum].</p>"""},
+<p>Zadnja posodobitev: 20. 11. 2026.</p>"""},
         "cookies": {"title": "Piškotki", "html": """
 <p>Ta stran <strong>ne uporablja piškotkov za sledenje ali oglaševanje</strong> in ne nalaga orodij za analitiko, ki bi zahtevala tvojo privolitev. Zato ne prikazujem obvestila o piškotkih.</p>
 <p>Edini podatki, ki se lahko shranijo v tvojem brskalniku, so tehnično nujni za delovanje strani (na primer zaščita obrazca pred zlorabo). Teh ni mogoče izklopiti, ker brez njih stran ne deluje pravilno, in se ne uporabljajo za sledenje.</p>
 <p>Če bom v prihodnje dodala analitiko ali druge storitve, ki uporabljajo piškotke, bom to stran posodobila in po potrebi prosila za privolitev.</p>
-<p>Zadnja posodobitev: [datum].</p>"""},
+<p>Zadnja posodobitev: 20. 11. 2026.</p>"""},
     },
     "en": {
         "imprint": {"title": "Imprint", "html": """
-<p><strong>BEEZEE.SI Katja Kolšek s.p.</strong> (sole proprietor)<br>[Address], [Postal code and town]<br>Slovenia</p>
-<p>Registration number: [reg. no.]<br>Tax number: [tax no.]<br>VAT ID: [SI VAT ID, if applicable]</p>
+<p><strong>BEEZEE.SI, digitalni marketing in poslovno svetovanje, Katja Kolšek s.p.</strong> (sole proprietor)<br>Ob Savinji 167, 3313 Polzela<br>Slovenia</p>
+<p>Registration number: 8129495000<br>VAT ID: SI14765977<br>Not registered as a VAT payer (identified for VAT purposes under Article 76a of the Slovenian VAT Act).</p>
 <p>Email: <a href="mailto:katja@beezee.si">katja@beezee.si</a><br>Phone: <a href="tel:+38641449054">+386 41 449 054</a></p>
 <p>Responsible for content: Katja Kolšek.</p>
 <p>The logo and texts on this site belong to BEEZEE.SI Katja Kolšek s.p. Project screenshots belong to their respective owners and are shown as references.</p>"""},
         "privacy": {"title": "Privacy policy", "html": """
-<p>The data controller is BEEZEE.SI Katja Kolšek s.p., [Address], [Postal code and town], Slovenia, <a href="mailto:katja@beezee.si">katja@beezee.si</a> ("I").</p>
+<p>The data controller is BEEZEE.SI Katja Kolšek s.p., Ob Savinji 167, 3313 Polzela, Slovenia, <a href="mailto:katja@beezee.si">katja@beezee.si</a> ("I").</p>
 <h2>What I process and why</h2>
 <p><strong>Contact form.</strong> When you write to me through the form, I process your name, email address and message so I can reply. The legal basis is your consent (Art. 6(1)(a) GDPR) and pre-contractual steps (Art. 6(1)(b) GDPR). I keep messages for up to 2 years after our last contact unless they lead to a project.</p>
 <p><strong>The hive (newsletter).</strong> When you join, I process your email address to send you the checklist and occasional news about new apps and projects. The legal basis is consent, which you confirm by clicking the link in the confirmation email (double opt-in). You can unsubscribe at any time via the link in every email or by writing to katja@beezee.si. The member list is stored on my own server (Neoserv, Slovenia); I do not use third-party newsletter tools.</p>
+<p><strong>Buying a BeeZee Pošiljke licence.</strong> When you buy, I process your name, company name, address, tax or VAT number, email address and store domain to perform the contract, send you the licence key, invoice and renewal reminders, and provide support. The legal basis is performance of a contract (Art. 6(1)(b) GDPR) and the legal obligation to keep invoices (Art. 6(1)(c) GDPR); invoices are kept for 10 years. For card payments, your card details are processed by the payment provider (Stripe); I do not see or store them. When activating and checking the licence, the plugin sends the licence key and store domain to my licence server; it does not send your customers' data.</p>
 <p><strong>Server logs.</strong> The site is hosted by Neoserv (Slovenia). For technical and security reasons the server briefly logs the IP address, time of access and requested page. The legal basis is my legitimate interest (Art. 6(1)(f) GDPR).</p>
 <h2>Who receives your data</h2>
-<p>I do not sell data or share it with third parties other than my hosting provider, who act on my instructions and in line with the GDPR.</p>
+<p>I do not sell data or share it with third parties other than my hosting provider, payment provider (Stripe) and accountant, who act on my instructions and in line with the GDPR.</p>
 <h2>Your rights</h2>
 <p>You can request access to your data, rectification, erasure, restriction of processing or data portability, and withdraw consent at any time. Write to <a href="mailto:katja@beezee.si">katja@beezee.si</a>. You can also lodge a complaint with the Slovenian Information Commissioner (www.ip-rs.si).</p>
-<p>Last updated: [date].</p>"""},
+<p>Last updated: 20 November 2026.</p>"""},
         "cookies": {"title": "Cookies", "html": """
 <p>This site <strong>does not use tracking or advertising cookies</strong> and does not load analytics tools that would require your consent, which is why there is no cookie banner.</p>
 <p>The only data that may be stored in your browser is strictly necessary for the site to work (for example, protecting the forms against abuse). It cannot be switched off because the site would not work properly without it, and it is not used for tracking.</p>
 <p>If I add analytics or other cookie-based services in the future, I will update this page and ask for consent where required.</p>
-<p>Last updated: [date].</p>"""},
+<p>Last updated: 20 November 2026.</p>"""},
     },
     "hr": {
         "imprint": {"title": "Impresum", "html": """
-<p><strong>BEEZEE.SI Katja Kolšek s.p.</strong> (obrt)<br>[Adresa], [Poštanski broj i mjesto]<br>Slovenija</p>
-<p>Matični broj: [matični broj]<br>Porezni broj: [porezni broj]<br>PDV ID: [SI PDV ID, ako postoji]</p>
+<p><strong>BEEZEE.SI, digitalni marketing in poslovno svetovanje, Katja Kolšek s.p.</strong> (obrt)<br>Ob Savinji 167, 3313 Polzela<br>Slovenija</p>
+<p>Matični broj: 8129495000<br>PDV ID: SI14765977<br>Nisam obveznica PDV-a (identificirana za potrebe PDV-a prema čl. 76.a slovenskog Zakona o PDV-u).</p>
 <p>E-pošta: <a href="mailto:katja@beezee.si">katja@beezee.si</a><br>Telefon: <a href="tel:+38641449054">+386 41 449 054</a></p>
 <p>Odgovorna osoba za sadržaj: Katja Kolšek.</p>
 <p>Logotip i tekstovi na ovoj stranici vlasništvo su BEEZEE.SI Katja Kolšek s.p. Snimke zaslona projekata vlasništvo su njihovih vlasnika i prikazane su kao referenca.</p>"""},
         "privacy": {"title": "Politika privatnosti", "html": """
-<p>Voditelj obrade osobnih podataka je BEEZEE.SI Katja Kolšek s.p., [Adresa], [Poštanski broj i mjesto], Slovenija, <a href="mailto:katja@beezee.si">katja@beezee.si</a> (dalje »ja«).</p>
+<p>Voditelj obrade osobnih podataka je BEEZEE.SI Katja Kolšek s.p., Ob Savinji 167, 3313 Polzela, Slovenija, <a href="mailto:katja@beezee.si">katja@beezee.si</a> (dalje »ja«).</p>
 <h2>Koje podatke obrađujem i zašto</h2>
 <p><strong>Kontaktni obrazac.</strong> Kad mi pišeš putem obrasca, obrađujem tvoje ime, adresu e-pošte i sadržaj poruke kako bih ti mogla odgovoriti. Pravna osnova je tvoja privola (čl. 6(1)(a) GDPR) i radnje prije sklapanja ugovora (čl. 6(1)(b) GDPR). Poruke čuvam najviše 2 godine nakon zadnjeg kontakta, osim ako iz njih nastane suradnja.</p>
 <p><strong>Košnica (newsletter).</strong> Prijavom obrađujem tvoju adresu e-pošte kako bih ti poslala kontrolni popis i povremene obavijesti o novim aplikacijama i projektima. Pravna osnova je privola, koju potvrđuješ klikom u e-poruci za potvrdu (dvostruka potvrda). Odjaviti se možeš bilo kada putem poveznice na dnu svake poruke ili porukom na katja@beezee.si. Popis članova čuvam na vlastitom poslužitelju (Neoserv, Slovenija); ne koristim vanjske alate za newsletter.</p>
+<p><strong>Kupnja licence za BeeZee Pošiljke.</strong> Pri kupnji obrađujem tvoje ime, naziv tvrtke, adresu, OIB odnosno PDV ID, adresu e-pošte i domenu trgovine kako bih izvršila ugovor, poslala ti licencni ključ, račun i podsjetnike prije isteka te ti pružila podršku. Pravna osnova je izvršenje ugovora (čl. 6(1)(b) GDPR) i zakonska obveza čuvanja računa (čl. 6(1)(c) GDPR); račune čuvam 10 godina. Kod plaćanja karticom podatke kartice obrađuje pružatelj usluge plaćanja (Stripe); ja ih ne vidim i ne čuvam. Dodatak pri aktivaciji i provjeri licence šalje na moj licencni poslužitelj licencni ključ i domenu trgovine; podatke tvojih kupaca ne šalje.</p>
 <p><strong>Zapisi poslužitelja.</strong> Stranicu hostira Neoserv (Slovenija). Poslužitelj iz tehničkih i sigurnosnih razloga kratko bilježi IP adresu, vrijeme pristupa i traženu stranicu. Pravna osnova je moj legitimni interes (čl. 6(1)(f) GDPR).</p>
 <h2>Kome prosljeđujem podatke</h2>
-<p>Podatke ne prodajem i ne prosljeđujem trećim stranama, osim pružatelju hostinga, koji rade prema mojim uputama i u skladu s GDPR-om.</p>
+<p>Podatke ne prodajem i ne prosljeđujem trećim stranama, osim pružatelju hostinga, pružatelju usluge plaćanja (Stripe) i knjigovodstvenom servisu, koji rade prema mojim uputama i u skladu s GDPR-om.</p>
 <h2>Tvoja prava</h2>
 <p>U svakom trenutku možeš zatražiti pristup svojim podacima, ispravak, brisanje, ograničenje obrade ili prijenos podataka te povući privolu. Piši na <a href="mailto:katja@beezee.si">katja@beezee.si</a>. Pritužbu možeš podnijeti Informacijskom povjereniku Republike Slovenije (www.ip-rs.si) ili AZOP-u u Hrvatskoj.</p>
-<p>Zadnje ažuriranje: [datum].</p>"""},
+<p>Zadnje ažuriranje: 20. 11. 2026.</p>"""},
         "cookies": {"title": "Kolačići", "html": """
 <p>Ova stranica <strong>ne koristi kolačiće za praćenje ili oglašavanje</strong> i ne učitava alate za analitiku koji bi zahtijevali tvoju privolu, pa zato nema obavijesti o kolačićima.</p>
 <p>Jedini podaci koji se mogu spremiti u tvoj preglednik tehnički su nužni za rad stranice (npr. zaštita obrasca od zlouporabe). Ne mogu se isključiti jer bez njih stranica ne radi ispravno i ne koriste se za praćenje.</p>
 <p>Ako u budućnosti dodam analitiku ili druge usluge koje koriste kolačiće, ažurirat ću ovu stranicu i po potrebi zatražiti privolu.</p>
-<p>Zadnje ažuriranje: [datum].</p>"""},
+<p>Zadnje ažuriranje: 20. 11. 2026.</p>"""},
     },
 }
+
+# Prodajni in licenčni pogoji (besedila v terms.py)
+from terms import TERMS
+for _l in LANGS:
+    LEGAL[_l]["terms"] = TERMS[_l]

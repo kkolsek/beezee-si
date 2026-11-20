@@ -7,7 +7,8 @@ import os, shutil, html, datetime
 from content import SITE, LANGS, PATHS, T, PROJECTS, FILTERS, LEGAL
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DIST = os.path.join(os.path.dirname(HERE), "dist")
+# Ciljna mapa: privzeto dist/, pri razporeditvi v cPanelu jo nastavi BEEZEE_DIST (gradnja neposredno v public_html)
+DIST = os.environ.get("BEEZEE_DIST") or os.path.join(os.path.dirname(HERE), "dist")
 LOGO_Y = "/assets/img/logo-yellow.png"
 LOGO_B = "/assets/img/logo-black.png"
 TODAY = datetime.date.today().isoformat()
@@ -98,14 +99,14 @@ def footer(lang, t, home):
   <div class="wrap">
     <div class="foot-brand"><img src="%(logo)s" alt="" width="30" height="30"><div><strong>BEEZEE</strong><br><span>%(legal)s</span></div></div>
     <nav class="foot-nav" aria-label="%(footNav)s">%(links)s</nav>
-    <div class="foot-legal"><span>SL · EN · HR</span><a href="%(privacy)s">%(privacyL)s</a><a href="%(cookies)s">%(cookiesL)s</a><a href="%(imprint)s">%(imprintL)s</a></div>
+    <div class="foot-legal"><span>SL · EN · HR</span><a href="%(privacy)s">%(privacyL)s</a><a href="%(cookies)s">%(cookiesL)s</a><a href="%(imprint)s">%(imprintL)s</a><a href="%(terms)s">%(termsL)s</a></div>
   </div>
 </footer>
 <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
 """ % {"logo": LOGO_B, "legal": esc(t["footLegal"]), "footNav": esc(t["footNav"]), "links": links,
-       "privacy": p["privacy"], "privacyL": esc(t["privacy"]), "cookies": p["cookies"], "cookiesL": esc(t["cookies"]), "imprint": p["imprint"], "imprintL": esc(t["imprint"])}
+       "privacy": p["privacy"], "privacyL": esc(t["privacy"]), "cookies": p["cookies"], "cookiesL": esc(t["cookies"]), "imprint": p["imprint"], "imprintL": esc(t["imprint"]), "terms": p["terms"], "termsL": esc(t["terms"])}
 
 def comb(with_labels=True):
     """Satovje iz 7 celic (hero in okno v razdelku O meni)."""
@@ -348,7 +349,7 @@ def main():
     for lang in LANGS:
         p = PATHS[lang]; t = T[lang]
         write(p["home"] + "index.html", home_page(lang)); urls.append((p["home"], "1.0"))
-        for key in ("privacy", "cookies", "imprint"):
+        for key in ("privacy", "cookies", "imprint", "terms"):
             lg = LEGAL[lang][key]
             write(p[key] + "index.html", sub_page(lang, key, lg["title"], lg["html"])); urls.append((p[key], "0.3"))
         thanks = '<p>%s</p><h2>%s</h2><p>%s</p>' % (esc(t["thanksText"]), esc(t["thanksHiveTitle"]), esc(t["thanksHiveText"]))
@@ -362,7 +363,7 @@ def main():
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     sm.append('<url><loc>%s/posiljke/</loc><lastmod>%s</lastmod></url>' % (SITE, TODAY))
     for lang in LANGS:
-        for key in ("home", "privacy", "cookies", "imprint"):
+        for key in ("home", "privacy", "cookies", "imprint", "terms"):
             alts = "".join('<xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>' % (l, SITE, PATHS[l][key]) for l in LANGS)
             sm.append('<url><loc>%s%s</loc><lastmod>%s</lastmod>%s</url>' % (SITE, PATHS[lang][key], TODAY, alts))
     sm.append('</urlset>')
