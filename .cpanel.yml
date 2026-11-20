@@ -1,8 +1,11 @@
 ---
-# cPanel Git Version Control: razporeditev ob "Deploy HEAD Commit"
-# Zdaj: test.beezee.si (+ noindex). Ob objavi v zivo: DEPLOYPATH = /home/beezeesi/public_html/ in odstrani zadnjo vrstico (noindex).
+# cPanel Git Version Control: razporeditev ob "Deploy HEAD Commit" na beezee.si (public_html).
+# 1) prekopira dist/ (slike, pisave, PDF, zadnja zgrajena stran)
+# 2) na strezniku zgradi strani iz src/ neposredno v public_html (BEEZEE_DIST)
+# .htaccess s preusmeritvami pausie/lonc je v src/.htaccess in dist/.htaccess
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/beezeesi/test.beezee.si/
+    - export DEPLOYPATH=/home/beezeesi/public_html/
     - /bin/cp -R dist/. $DEPLOYPATH
-    - /bin/cat deploy/test-noindex.conf >> $DEPLOYPATH.htaccess
+    - export BEEZEE_DIST=$DEPLOYPATH
+    - python3 -B src/build.py

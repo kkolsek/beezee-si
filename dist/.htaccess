@@ -1,5 +1,20 @@
+# BEGIN Pausie domain redirects (pausie.si, getpausie.com -> pausie.app)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?pausie\.si$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^(www\.)?getpausie\.com$ [NC]
+RewriteRule ^(.*)$ https://pausie.app/$1 [R=301,L]
+</IfModule>
+# END Pausie domain redirects
+
+# BEGIN Lonc domain redirect (lonc.si -> lonc.app)
+RewriteCond %{HTTP_HOST} ^lonc\.si$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.lonc\.si$
+RewriteRule ^/?$ "https\:\/\/lonc\.app\/" [R=301,L]
+# END Lonc domain redirect
+
 # beezee.si – statična stran
-# OPOMBA: ob prenosu v public_html obdrži obstoječe preusmeritve pausie.si / getpausie.com → pausie.app in lonc.si → lonc.app (so nad tem blokom v .htaccess na strežniku).
+# Preusmeritve pausie/lonc zgoraj so del te datoteke – ne briši jih (domene so parkirane na beezee.si).
 
 DirectoryIndex index.html index.php
 Options -Indexes
