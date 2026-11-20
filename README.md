@@ -25,11 +25,12 @@ Stran je čist HTML/CSS z malo JavaScripta, zgrajena po vzoru lonc.app. Brez Wor
 - po potrditvi prijave `panj.php` pošlje pozdravno e-pošto s povezavo na PDF, stran »Dobrodošli v panju« ima gumb za prenos
 
 ## Git / objava
-- repozitorij: https://github.com/kkolsek/beezee-si (privatni), v cPanelu kloniran v `/home/beezeesi/repositories/beezee-si`
+- repozitorij: https://github.com/kkolsek/beezee-si (javni – namenoma, da cPanel lahko prenaša brez prijave; gesel in ključev v njem ni, `config.php` je v .gitignore), v cPanelu kloniran v `/home/beezeesi/repositories/beezee-si`
 - **od 20. 11. 2026** `.cpanel.yml` razporeja neposredno na **beezee.si** (`public_html`): prekopira `dist/`, nato na strežniku zažene `python3 src/build.py` z `BEEZEE_DIST=public_html`. Strani se torej zgradijo iz `src/` ob vsakem deployu, tudi če `dist/` v repozitoriju ni svež.
 - preusmeritve pausie.si/getpausie.com → pausie.app in lonc.si → lonc.app so na vrhu `src/.htaccess` (in `dist/.htaccess`) – ne briši jih
 - test.beezee.si je izbrisan (20. 11. 2026)
-- prodajni in licenčni pogoji (BeeZee Pošiljke): besedila v `src/terms.py`, strani `/pogoji/`, `/en/terms/`, `/hr/uvjeti/`
+- splošni pogoji spletne strani: besedila v `src/terms.py`, strani `/pogoji/`, `/en/terms/`, `/hr/uvjeti/`
+- pogoji za licence vtičnikov BeeZee Pošiljke so ločeni, v trgovini: https://trgovina.beezee.si/pogoji/ (tudi politika zasebnosti za nakup: https://trgovina.beezee.si/politika-zasebnosti/)
 
 ## URL-ji
 - `/` slovensko, `/en/` angleško, `/hr/` hrvaško (hreflang je nastavljen)

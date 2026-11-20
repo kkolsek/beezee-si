@@ -219,10 +219,10 @@ LEGAL = {
 <h2>Katere podatke obdelujem in zakaj</h2>
 <p><strong>Kontaktni obrazec.</strong> Ko mi pišeš prek obrazca, obdelujem tvoje ime, e-poštni naslov in vsebino sporočila, da ti lahko odgovorim. Pravna podlaga je tvoja privolitev (člen 6(1)(a) GDPR) in izvajanje predpogodbenih ukrepov (člen 6(1)(b) GDPR). Sporočila hranim največ 2 leti po zadnjem stiku, razen če iz njih nastane sodelovanje.</p>
 <p><strong>Panj (e-novice).</strong> Ob prijavi obdelujem tvoj e-poštni naslov, da ti pošljem kontrolni seznam in občasna obvestila o novih aplikacijah in projektih. Pravna podlaga je privolitev, ki jo potrdiš s klikom v potrditvenem e-sporočilu (dvojna potrditev). Odjaviš se lahko kadar koli s povezavo na dnu vsakega sporočila ali s sporočilom na katja@beezee.si. Seznam članov hranim na svojem strežniku (Neoserv, Slovenija); ne uporabljam zunanjih orodij za e-novice.</p>
-<p><strong>Nakup licence za BeeZee Pošiljke.</strong> Ob nakupu obdelujem tvoje ime, ime podjetja, naslov, davčno številko oziroma ID za DDV, e-poštni naslov in domeno trgovine, da izvedem pogodbo, ti pošljem licenčni ključ, račun in opomnike pred iztekom ter ti nudim podporo. Pravna podlaga je izvajanje pogodbe (člen 6(1)(b) GDPR) in zakonska obveznost hrambe računov (člen 6(1)(c) GDPR); račune hranim 10 let. Pri plačilu s kartico podatke kartice obdela plačilni posrednik (Stripe); jaz jih ne vidim in ne hranim. Vtičnik ob aktivaciji in preverjanju licence pošlje na moj licenčni strežnik licenčni ključ in domeno trgovine; podatkov tvojih kupcev ne pošilja.</p>
+<p><strong>Nakup licence za BeeZee Pošiljke.</strong> Licence se kupujejo v trgovini na trgovina.beezee.si. Kako tam obdelujem podatke ob nakupu in pri preverjanju licence, piše v <a href="https://trgovina.beezee.si/politika-zasebnosti/">politiki zasebnosti trgovine</a>.</p>
 <p><strong>Strežniški dnevniki.</strong> Gostovanje strani zagotavlja Neoserv (Slovenija). Strežnik iz tehničnih in varnostnih razlogov kratek čas beleži IP naslov, čas dostopa in zahtevano stran. Pravna podlaga je moj zakoniti interes (člen 6(1)(f) GDPR).</p>
 <h2>Komu posredujem podatke</h2>
-<p>Podatkov ne prodajam in jih ne posredujem tretjim osebam, razen ponudniku gostovanja, plačilnemu posredniku (Stripe) in računovodskemu servisu, ki delujejo po mojih navodilih in v skladu z GDPR.</p>
+<p>Podatkov ne prodajam in jih ne posredujem tretjim osebam, razen ponudniku gostovanja in računovodskemu servisu, ki delujeta po mojih navodilih in v skladu z GDPR.</p>
 <h2>Tvoje pravice</h2>
 <p>Kadar koli lahko zahtevaš dostop do svojih podatkov, popravek, izbris, omejitev obdelave ali prenos podatkov ter prekličeš privolitev. Piši na <a href="mailto:katja@beezee.si">katja@beezee.si</a>. Pritožbo lahko vložiš pri Informacijskem pooblaščencu Republike Slovenije (www.ip-rs.si).</p>
 <p>Zadnja posodobitev: 20. 11. 2026.</p>"""},
@@ -244,10 +244,10 @@ LEGAL = {
 <h2>What I process and why</h2>
 <p><strong>Contact form.</strong> When you write to me through the form, I process your name, email address and message so I can reply. The legal basis is your consent (Art. 6(1)(a) GDPR) and pre-contractual steps (Art. 6(1)(b) GDPR). I keep messages for up to 2 years after our last contact unless they lead to a project.</p>
 <p><strong>The hive (newsletter).</strong> When you join, I process your email address to send you the checklist and occasional news about new apps and projects. The legal basis is consent, which you confirm by clicking the link in the confirmation email (double opt-in). You can unsubscribe at any time via the link in every email or by writing to katja@beezee.si. The member list is stored on my own server (Neoserv, Slovenia); I do not use third-party newsletter tools.</p>
-<p><strong>Buying a BeeZee Pošiljke licence.</strong> When you buy, I process your name, company name, address, tax or VAT number, email address and store domain to perform the contract, send you the licence key, invoice and renewal reminders, and provide support. The legal basis is performance of a contract (Art. 6(1)(b) GDPR) and the legal obligation to keep invoices (Art. 6(1)(c) GDPR); invoices are kept for 10 years. For card payments, your card details are processed by the payment provider (Stripe); I do not see or store them. When activating and checking the licence, the plugin sends the licence key and store domain to my licence server; it does not send your customers' data.</p>
+<p><strong>Buying a BeeZee Pošiljke licence.</strong> Licences are sold in the shop at trgovina.beezee.si. How I process data there during purchase and licence checks is described in the <a href="https://trgovina.beezee.si/politika-zasebnosti/">shop's privacy policy</a> (in Slovenian).</p>
 <p><strong>Server logs.</strong> The site is hosted by Neoserv (Slovenia). For technical and security reasons the server briefly logs the IP address, time of access and requested page. The legal basis is my legitimate interest (Art. 6(1)(f) GDPR).</p>
 <h2>Who receives your data</h2>
-<p>I do not sell data or share it with third parties other than my hosting provider, payment provider (Stripe) and accountant, who act on my instructions and in line with the GDPR.</p>
+<p>I do not sell data or share it with third parties other than my hosting provider and accountant, who act on my instructions and in line with the GDPR.</p>
 <h2>Your rights</h2>
 <p>You can request access to your data, rectification, erasure, restriction of processing or data portability, and withdraw consent at any time. Write to <a href="mailto:katja@beezee.si">katja@beezee.si</a>. You can also lodge a complaint with the Slovenian Information Commissioner (www.ip-rs.si).</p>
 <p>Last updated: 20 November 2026.</p>"""},
@@ -269,10 +269,10 @@ LEGAL = {
 <h2>Koje podatke obrađujem i zašto</h2>
 <p><strong>Kontaktni obrazac.</strong> Kad mi pišeš putem obrasca, obrađujem tvoje ime, adresu e-pošte i sadržaj poruke kako bih ti mogla odgovoriti. Pravna osnova je tvoja privola (čl. 6(1)(a) GDPR) i radnje prije sklapanja ugovora (čl. 6(1)(b) GDPR). Poruke čuvam najviše 2 godine nakon zadnjeg kontakta, osim ako iz njih nastane suradnja.</p>
 <p><strong>Košnica (newsletter).</strong> Prijavom obrađujem tvoju adresu e-pošte kako bih ti poslala kontrolni popis i povremene obavijesti o novim aplikacijama i projektima. Pravna osnova je privola, koju potvrđuješ klikom u e-poruci za potvrdu (dvostruka potvrda). Odjaviti se možeš bilo kada putem poveznice na dnu svake poruke ili porukom na katja@beezee.si. Popis članova čuvam na vlastitom poslužitelju (Neoserv, Slovenija); ne koristim vanjske alate za newsletter.</p>
-<p><strong>Kupnja licence za BeeZee Pošiljke.</strong> Pri kupnji obrađujem tvoje ime, naziv tvrtke, adresu, OIB odnosno PDV ID, adresu e-pošte i domenu trgovine kako bih izvršila ugovor, poslala ti licencni ključ, račun i podsjetnike prije isteka te ti pružila podršku. Pravna osnova je izvršenje ugovora (čl. 6(1)(b) GDPR) i zakonska obveza čuvanja računa (čl. 6(1)(c) GDPR); račune čuvam 10 godina. Kod plaćanja karticom podatke kartice obrađuje pružatelj usluge plaćanja (Stripe); ja ih ne vidim i ne čuvam. Dodatak pri aktivaciji i provjeri licence šalje na moj licencni poslužitelj licencni ključ i domenu trgovine; podatke tvojih kupaca ne šalje.</p>
+<p><strong>Kupnja licence za BeeZee Pošiljke.</strong> Licence se kupuju u trgovini na trgovina.beezee.si. Kako tamo obrađujem podatke pri kupnji i provjeri licence, piše u <a href="https://trgovina.beezee.si/politika-zasebnosti/">politici privatnosti trgovine</a> (na slovenskom).</p>
 <p><strong>Zapisi poslužitelja.</strong> Stranicu hostira Neoserv (Slovenija). Poslužitelj iz tehničkih i sigurnosnih razloga kratko bilježi IP adresu, vrijeme pristupa i traženu stranicu. Pravna osnova je moj legitimni interes (čl. 6(1)(f) GDPR).</p>
 <h2>Kome prosljeđujem podatke</h2>
-<p>Podatke ne prodajem i ne prosljeđujem trećim stranama, osim pružatelju hostinga, pružatelju usluge plaćanja (Stripe) i knjigovodstvenom servisu, koji rade prema mojim uputama i u skladu s GDPR-om.</p>
+<p>Podatke ne prodajem i ne prosljeđujem trećim stranama, osim pružatelju hostinga i knjigovodstvenom servisu, koji rade prema mojim uputama i u skladu s GDPR-om.</p>
 <h2>Tvoja prava</h2>
 <p>U svakom trenutku možeš zatražiti pristup svojim podacima, ispravak, brisanje, ograničenje obrade ili prijenos podataka te povući privolu. Piši na <a href="mailto:katja@beezee.si">katja@beezee.si</a>. Pritužbu možeš podnijeti Informacijskom povjereniku Republike Slovenije (www.ip-rs.si) ili AZOP-u u Hrvatskoj.</p>
 <p>Zadnje ažuriranje: 20. 11. 2026.</p>"""},
@@ -284,7 +284,7 @@ LEGAL = {
     },
 }
 
-# Prodajni in licenčni pogoji (besedila v terms.py)
+# Splošni pogoji spletne strani (besedila v terms.py); pogoji za licence vtičnikov so na trgovina.beezee.si/pogoji/
 from terms import TERMS
 for _l in LANGS:
     LEGAL[_l]["terms"] = TERMS[_l]
