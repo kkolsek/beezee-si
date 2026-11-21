@@ -329,17 +329,21 @@ def write(rel, content):
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as f: f.write(content)
 
+# Prodajne strani vtičnika (samostojni HTML v src/<pot>/index.html) in njihove jezikovne različice za sitemap
+POSILJKE = ("posiljke", "posiljke/gls", "hr/posiljke", "hr/posiljke/gls")
+POSILJKE_ALT = [{"sl": "/posiljke/", "hr": "/hr/posiljke/"}, {"sl": "/posiljke/gls/", "hr": "/hr/posiljke/gls/"}]
+
 # ---------------------------------------------------------------- build
 def main():
     os.makedirs(DIST, exist_ok=True)
     for sub in ("assets/css", "assets/js"): os.makedirs(os.path.join(DIST, sub), exist_ok=True)
     shutil.copy(os.path.join(HERE, "style.css"), os.path.join(DIST, "assets/css/style.css"))
     shutil.copy(os.path.join(HERE, "main.js"), os.path.join(DIST, "assets/js/main.js"))
-    for php in ("kontakt.php", "panj.php", "config.example.php", ".htaccess"):
+    for php in ("kontakt.php", "panj.php", "obvesti.php", "config.example.php", ".htaccess"):
         src = os.path.join(HERE, php)
         if os.path.exists(src): shutil.copy(src, os.path.join(DIST, php))
     # Prodajna stran vtičnika (samostojen HTML, uporablja /assets/css/style.css)
-    for sub in ("posiljke",):
+    for sub in POSILJKE:
         src = os.path.join(HERE, sub, "index.html")
         if os.path.exists(src):
             os.makedirs(os.path.join(DIST, sub), exist_ok=True)
@@ -361,7 +365,11 @@ def main():
         write(p["welcome"] + "index.html", sub_page(lang, "welcome", t["welcomeTitle"], welcome, noindex=True, cls="welcome", hero=hero))
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-    sm.append('<url><loc>%s/posiljke/</loc><lastmod>%s</lastmod></url>' % (SITE, TODAY))
+    for grp in POSILJKE_ALT:
+        alts = "".join('<xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>' % (l, SITE, u) for l, u in grp.items())
+        alts += '<xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>' % (SITE, grp["sl"])
+        for u in grp.values():
+            sm.append('<url><loc>%s%s</loc><lastmod>%s</lastmod>%s</url>' % (SITE, u, TODAY, alts))
     for lang in LANGS:
         for key in ("home", "privacy", "cookies", "imprint", "terms"):
             alts = "".join('<xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>' % (l, SITE, PATHS[l][key]) for l in LANGS)
