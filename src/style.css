@@ -81,6 +81,7 @@ h2.sec{font-size:48px;margin:0 0 10px}
 .main-nav a{text-decoration:none;padding:8px 14px;border-radius:999px;transition:background .15s}
 .main-nav a:hover{background:var(--honey);color:var(--ink)}
 .head-right{display:flex;align-items:center;gap:16px}
+.head-acc{font-weight:600;font-size:14px;text-decoration:none;color:var(--ink);white-space:nowrap}.head-acc:hover{text-decoration:underline;text-underline-offset:4px}
 .lang{display:flex;gap:2px;font-size:13px;background:#fff;border-radius:999px;padding:3px;border:2px solid var(--ink)}
 .lang a{text-decoration:none;padding:4px 9px;color:var(--ink);border-radius:999px;font-weight:500}
 .lang a:hover{background:var(--pale)}
@@ -354,7 +355,7 @@ a.hex:hover{transform:rotate(-2deg) scale(1.03);color:var(--ink)}
   .hero h1{font-size:64px}
 }
 @media (max-width:760px){
-  .main-nav,.head-cta,.sticker-cta,.path,.bee{display:none}
+  .main-nav,.head-cta,.head-acc,.sticker-cta,.path,.bee{display:none}
   .burger{display:flex}
   .site-header,.section,.hero,.services,.work,.about,.process,.hive,.contact,.site-footer,.page{padding-left:20px;padding-right:20px}
   .hero,.services,.work,.about,.process,.hive,.contact,.page{padding-top:56px;padding-bottom:56px}

@@ -99,14 +99,14 @@ def footer(lang, t, home):
   <div class="wrap">
     <div class="foot-brand"><img src="%(logo)s" alt="" width="30" height="30"><div><strong>BEEZEE</strong><br><span>%(legal)s</span></div></div>
     <nav class="foot-nav" aria-label="%(footNav)s">%(links)s</nav>
-    <div class="foot-legal"><span>SL · EN · HR</span><a href="%(privacy)s">%(privacyL)s</a><a href="%(cookies)s">%(cookiesL)s</a><a href="%(imprint)s">%(imprintL)s</a><a href="%(terms)s">%(termsL)s</a></div>
+    <div class="foot-legal"><span>SL · EN · HR</span><a href="%(privacy)s">%(privacyL)s</a><a href="%(cookies)s">%(cookiesL)s</a><a href="%(imprint)s">%(imprintL)s</a><a href="%(terms)s">%(termsL)s</a><a href="https://trgovina.beezee.si/moj-racun/">%(accountL)s</a></div>
   </div>
 </footer>
 <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
 """ % {"logo": LOGO_B, "legal": esc(t["footLegal"]), "footNav": esc(t["footNav"]), "links": links,
-       "privacy": p["privacy"], "privacyL": esc(t["privacy"]), "cookies": p["cookies"], "cookiesL": esc(t["cookies"]), "imprint": p["imprint"], "imprintL": esc(t["imprint"]), "terms": p["terms"], "termsL": esc(t["terms"])}
+       "privacy": p["privacy"], "privacyL": esc(t["privacy"]), "cookies": p["cookies"], "cookiesL": esc(t["cookies"]), "imprint": p["imprint"], "imprintL": esc(t["imprint"]), "terms": p["terms"], "termsL": esc(t["terms"]), "accountL": esc(t["account"])}
 
 def comb(with_labels=True):
     """Satovje iz 7 celic (hero in okno v razdelku O meni)."""
