@@ -132,6 +132,17 @@
  .bp-row{grid-template-columns:58px 1fr}
  .bp-row .bp-badge,.bp-row .bp-print{grid-column:2;justify-self:start}
 }
+.bp-cmp-wrap{overflow-x:auto;border:2px solid var(--ink);border-radius:16px;background:#fff;box-shadow:10px 10px 0 var(--honey)}
+.bp-cmp{width:100%;border-collapse:collapse;font-size:16px;min-width:620px}
+.bp-cmp th,.bp-cmp td{padding:14px 18px;text-align:center;border-bottom:1px dashed var(--sand)}
+.bp-cmp th:first-child,.bp-cmp td:first-child{text-align:left}
+.bp-cmp thead th{font-family:var(--head);font-size:18px;background:var(--pale);border-bottom:2px solid var(--ink)}
+.bp-cmp thead th.us{background:var(--honey)}
+.bp-cmp td.us{background:#FFF6CF;font-weight:700}
+.bp-cmp tbody tr:last-child td{border-bottom:0}
+.bp-cmp .y{color:#1f7a3a;font-weight:700}.bp-cmp .n{color:#b3261e;font-weight:700}.bp-cmp .p{color:var(--grey)}
+@media(max-width:700px){.bp-cmp{font-size:13.5px;min-width:0}.bp-cmp th,.bp-cmp td{padding:10px 8px}.bp-cmp thead th{font-size:14px}.bp-cmp small{display:none}}
+.bp-cmp-note{margin:18px 0 0;font-size:14px;color:var(--grey)}
 </style>
 </head>
 <body>
@@ -204,6 +215,34 @@
       <div class="bp-card star"><span class="bp-tag">samo pri nas</span><div class="bp-ico">⏳</div><h3>Neprevzeti paketi</h3><p>Kupec, ki plača po povzetju, dobi opomnik, ko ga paket čaka v paketomatu ali na Pickup točki. Če paketa ne prevzame, naročilo dobi status Neprevzeto in izdelki se vrnejo na zalogo. Kdor dvakrat ne prevzame paketa, povzetja ne more več izbrati.</p></div>
       <div class="bp-card"><div class="bp-ico">📦</div><h3>Dve naročili, en paket</h3><p>Kupec naroči še enkrat, preden odpošlješ? Poveži naročili z isto pošiljko – ena nalepka, ena e-pošta.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- 2b. PRIMERJAVA -->
+<section class="bp-sec" id="primerjava" style="padding-top:0">
+  <div class="wrap">
+    <div class="bp-head">
+      <h2>Kaj dobiš drugače kot drugje</h2>
+      <p>Pred svojim vtičnikom sem preizkusila druge DPD vtičnike in delala ročno v EasyShipu. Tole sem pogrešala.</p>
+    </div>
+    <div class="bp-cmp-wrap">
+      <table class="bp-cmp">
+        <thead><tr><th>Funkcija</th><th class="us">BeeZee Pošiljke</th><th>Drugi DPD vtičniki*</th><th>Ročno v EasyShipu</th></tr></thead>
+        <tbody>
+        <tr><td>Nalepka iz naročila z enim klikom</td><td class="us"><span class="y">✓</span></td><td><span class="y">✓</span></td><td><span class="n">✗</span> <small>prepisovanje</small></td></tr>
+        <tr><td>Nalepke za več naročil hkrati</td><td class="us"><span class="y">✓</span></td><td><span class="p">včasih</span></td><td><span class="n">✗</span></td></tr>
+        <tr><td>Ponovni tisk samo ene nalepke</td><td class="us"><span class="y">✓</span></td><td><span class="n">✗</span></td><td><span class="y">✓</span></td></tr>
+        <tr><td>Dve naročili istega kupca v en paket</td><td class="us"><span class="y">✓</span></td><td><span class="n">✗</span></td><td><span class="p">ročno</span></td></tr>
+        <tr><td>Storno in odpoklic iz naročila</td><td class="us"><span class="y">✓</span></td><td><span class="n">✗</span></td><td><span class="p">v EasyShipu</span></td></tr>
+        <tr><td>Pickup točke in paketomati na blagajni</td><td class="us"><span class="y">✓</span></td><td><span class="p">včasih</span></td><td><span class="n">✗</span></td></tr>
+        <tr><td>Sledenje paketov v seznamu naročil</td><td class="us"><span class="y">✓</span></td><td><span class="n">✗</span></td><td><span class="n">✗</span></td></tr>
+        <tr><td>Opomnik za neprevzet paket po povzetju</td><td class="us"><span class="y">✓</span></td><td><span class="n">✗</span></td><td><span class="n">✗</span></td></tr>
+        <tr><td>Neprevzeto naročilo: izdelki nazaj na zalogo</td><td class="us"><span class="y">✓</span></td><td><span class="n">✗</span></td><td><span class="n">✗</span></td></tr>
+        <tr><td>Podpora v slovenščini in hrvaščini</td><td class="us"><span class="y">✓</span></td><td><span class="p">različno</span></td><td><span class="n">✗</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="bp-cmp-note">* Glede na vtičnike, ki sem jih preizkusila v svojih trgovinah (stanje november 2026). Funkcije drugih vtičnikov se lahko spremenijo – preveri pri njihovem ponudniku.</p>
   </div>
 </section>
 
